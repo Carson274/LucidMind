@@ -15,6 +15,7 @@ class HomePageComponent extends UiComponent2<HomePageProps> {
         'display': 'flex',
         'flexDirection': 'column',
         'minHeight': '100vh',
+        'padding': '20px',
       }
     )(
       (Header()..name = 'Carson Secrest')(),
