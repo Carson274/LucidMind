@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["package_config|lib/package_config.dart","pub_semver|lib/pub_semver.dart","dart_style|lib/src/profile.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["async","io"],"hasMain":false}

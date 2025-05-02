@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["dart_style|lib/src/constants.dart","dart_style|lib/src/profile.dart","dart_style|lib/src/short/chunk.dart","dart_style|lib/src/short/fast_hash.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":false}

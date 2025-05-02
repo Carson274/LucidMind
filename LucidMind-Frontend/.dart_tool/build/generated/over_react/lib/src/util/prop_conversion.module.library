@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["js|lib/js.dart","js|lib/js_util.dart","meta|lib/meta.dart","over_react|lib/over_react.dart","over_react|lib/src/util/weak_map.dart","react|lib/react_client/js_backed_map.dart","react|lib/react_client/component_factory.dart","react|lib/react_client/react_interop.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":false}

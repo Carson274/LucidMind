@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["macros|lib/macros.dart","macros|lib/src/executor.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":false}

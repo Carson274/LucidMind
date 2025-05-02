@@ -1,0 +1,1 @@
+{"isEntrypoint":false,"deps":["analyzer|lib/dart/ast/ast.dart","analyzer|lib/src/dart/ast/utilities.dart","analyzer|lib/src/lint/lint_rule_timers.dart","analyzer|lib/src/lint/linter.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":[],"hasMain":false}
