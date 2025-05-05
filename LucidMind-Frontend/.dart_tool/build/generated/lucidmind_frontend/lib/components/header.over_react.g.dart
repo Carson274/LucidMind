@@ -174,13 +174,30 @@ mixin $HeaderProps on HeaderProps {
   String? get name => (props[_$key__name__HeaderProps] ?? null) as String?;
   @override
   set name(String? value) => props[_$key__name__HeaderProps] = value;
+  @override
+  void Function(String)? get setUserName =>
+      (props[_$key__setUserName__HeaderProps] ?? null) as void Function(
+          String)?;
+  @override
+  set setUserName(void Function(String)? value) =>
+      props[_$key__setUserName__HeaderProps] = value;
   /* GENERATED CONSTANTS */
   static const PropDescriptor _$prop__name__HeaderProps =
       PropDescriptor(_$key__name__HeaderProps);
+  static const PropDescriptor _$prop__setUserName__HeaderProps =
+      PropDescriptor(_$key__setUserName__HeaderProps);
   static const String _$key__name__HeaderProps = 'HeaderProps.name';
+  static const String _$key__setUserName__HeaderProps =
+      'HeaderProps.setUserName';
 
-  static const List<PropDescriptor> $props = [_$prop__name__HeaderProps];
-  static const List<String> $propKeys = [_$key__name__HeaderProps];
+  static const List<PropDescriptor> $props = [
+    _$prop__name__HeaderProps,
+    _$prop__setUserName__HeaderProps
+  ];
+  static const List<String> $propKeys = [
+    _$key__name__HeaderProps,
+    _$key__setUserName__HeaderProps
+  ];
 
   @override
   @UiProps.$mustCallSuper

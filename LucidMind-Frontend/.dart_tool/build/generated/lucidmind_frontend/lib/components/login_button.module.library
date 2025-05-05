@@ -1,0 +1,1 @@
+{"isEntrypoint":true,"deps":["over_react|lib/over_react.dart","lucidmind_frontend|lib/firebase_auth_interop.dart"],"parts":["lucidmind_frontend|lib/components/login_button.over_react.g.dart"],"conditionalDeps":[],"sdkDeps":["js_interop"],"hasMain":false}

@@ -11,6 +11,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   const dart = dart_sdk.dart;
   const dartx = dart_sdk.dartx;
   const builder_helpers = packages__over_react__component_base.src__component_declaration__builder_helpers;
+  const dom_components = packages__over_react__component_base.src__component__dom_components;
   const component_base = packages__over_react__component_base.src__component_declaration__component_base;
   const component_base_2 = packages__over_react__component_base.src__component_declaration__component_base_2;
   const prop_mixins = packages__over_react__component_base.src__component__prop_mixins;
@@ -104,8 +105,8 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   var C = Array(23).fill(void 0);
   var I = [
     "package:lucidmind_frontend/app.dart",
-    "package:over_react/src/component_declaration/component_base.dart",
     "dart:core",
+    "package:over_react/src/component_declaration/component_base.dart",
     "package:react/react_client/js_backed_map.dart",
     "org-dartlang-app:///packages/lucidmind_frontend/app.over_react.g.dart"
   ];
@@ -113,6 +114,8 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   app.AppProps[dart.mixinOn] = UiProps => class AppProps extends UiProps {};
   dart.addRtiResources(app.AppProps, ["lucidmind_frontend__app|AppProps"]);
   dart.setLibraryUri(app.AppProps, I[0]);
+  var _userName = dart.privateName(app, "_userName");
+  var _setUserName = dart.privateName(app, "_setUserName");
   var __Component__props = dart.privateName(app, "_#Component#_props");
   var __Component__props$ = dart.privateName(react, "_#Component#_props");
   var __Component__props_ = dart.privateName(app, "_#Component#_props=");
@@ -133,8 +136,18 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   var _as = dart.privateName(dart_rti, "_as");
   var _typedPropsCache_ = dart.privateName(app, "_typedPropsCache=");
   app.AppComponent = class AppComponent extends component_base_2.UiComponent2 {
+    [_setUserName](name) {
+      this.setState(dart.fn(() => {
+        this[_userName] = name;
+      }, dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Null()", true)));
+    }
     render() {
-      return home_page.HomePage().call();
+      let t$360;
+      return dom_components.Dom.div().call((t$360 = home_page.HomePage(), (() => {
+        t$360.name = this[_userName];
+        t$360.setUserName = dart.bind(this, _setUserName);
+        return t$360;
+      })()).call());
     }
     static ['_#new#tearOff']() {
       return new app.AppComponent.new(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__app|AppComponent", true));
@@ -179,11 +192,13 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   };
   (app.AppComponent.new = function(_ti) {
     this.$ti = this.$ti || _ti || dart.getReifiedType(this);
+    this[_userName] = null;
     dart.global.Object.getPrototypeOf(app.AppComponent).new.call(this, null);
     ;
   }).prototype = app.AppComponent.prototype;
   dart.addRtiResources(app.AppComponent, ["lucidmind_frontend__app|AppComponent"]);
   dart.setMethodSignature(app.AppComponent, () => dart.global.Object.setPrototypeOf({
+    [_setUserName]: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)", true),
     render: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "@()", true)
   }, dart.getMethods(dart.global.Object.getPrototypeOf(app.AppComponent))));
   dart.setGetterSignature(app.AppComponent, () => dart.global.Object.setPrototypeOf({
@@ -203,6 +218,12 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     [_typedPropsCache$]: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Object?", true)
   }, dart.getSetters(dart.global.Object.getPrototypeOf(app.AppComponent))));
   dart.setLibraryUri(app.AppComponent, I[0]);
+  dart.setFieldSignature(app.AppComponent, () => dart.global.Object.setPrototypeOf({[_userName]: {
+      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
+      isConst: false,
+      isFinal: false,
+      libraryUri: I[1]
+    }}, dart.getFields(dart.global.Object.getPrototypeOf(app.AppComponent))));
   var _is = dart.privateName(dart_rti, "_is");
   var PropsMeta_keys = dart.privateName(component_base, "PropsMeta.keys");
   var PropsMeta_fields = dart.privateName(component_base, "PropsMeta.fields");
@@ -329,7 +350,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Map<@,@>", true),
       isConst: false,
       isFinal: false,
-      libraryUri: I[2]
+      libraryUri: I[1]
     }}, dart.getFields(dart.global.Object.getPrototypeOf(app._$$AppProps$PlainMap))));
   app._$$AppProps$JsMap = class _$36$36AppProps$36JsMap extends app._$$AppProps {
     static ['_#new#tearOff'](backingMap) {
@@ -466,7 +487,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     "package:lucidmind_frontend/app.dart": app
   }, {
     "package:lucidmind_frontend/app.dart": ["app.over_react.g.dart"]
-  }, '{"version":3,"sourceRoot":"","sources":["app.dart","app.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AAYI,YAAO,AAAQ,AAAE;IACnB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ACqKU;IACR;;;;;;MAVuB,kBAAI;;;MAGO,oBAAM;;;MACd,uBAAS;;;;;;;;;;;;;;;oBAtIV;AACvB,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,oIAA6B,+GAAX,UAAU;;AAEnC,cAAO,0IAAqB,UAAU;;IAE1C;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,2BAApB;IAAwC;;;;;AAInB;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAAwB,6HAAC,SAAS,EAAE,QAAC,OAAQ,mHAAY,GAAG;IAAE;;;;AA/BlE;;EAAe;;;;;;;;;;;;;;;;;;;;AAoDE;IAAM;;;;;;;;;;;;;;gDARG;QAGV;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;6CARA;QAGf;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAeuB;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAGlC;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAGmD;AAC/C,gJAAkB,UAAU;IAAC;sBAGE;AAAe,gIAAY,UAAU;IAAC;;AAI3C;IAAI;;AAGR;IAAK;;AAKF,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;+CA1CiB;;;EA2CzB;;;;;;;;;;;;;;;;;;;;;+BA3IwB;AAAkB,UAAA,AAAa,aAAD,WAChD,mIAAkB,+IAClB,mHAAY,YAAY;EAAC;;MDrBZ,OAAG;YAAG;;;MCWnB,wBAAoB;YAAG,qCAC3B,cAAM,4ZAGK,mBACC;;MAqDR,4BAAwB;;;MA+Gd,qBAAiB","file":"app.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["app.dart","app.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;mBAY2B;AACvB,oBAAS;AACP,0BAAY,IAAI;;IAEpB;;UAKa;AADX,YAAW,AAAK,+BAIb,SAHA,AAAQ,sBAAA;AACL,QADK,aACE;AACP,QAFK,8BAES;cAFT;;IAKb;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAhBQ;;;EAiBV;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;ACwJU;IACR;;;;;;MAVuB,kBAAI;;;MAGO,oBAAM;;;MACd,uBAAS;;;;;;;;;;;;;;;oBAtIV;AACvB,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,oIAA6B,+GAAX,UAAU;;AAEnC,cAAO,0IAAqB,UAAU;;IAE1C;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,2BAApB;IAAwC;;;;;AAInB;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAAwB,6HAAC,SAAS,EAAE,QAAC,OAAQ,mHAAY,GAAG;IAAE;;;;AA/BlE;;EAAe;;;;;;;;;;;;;;;;;;;;AAoDE;IAAM;;;;;;;;;;;;;;gDARG;QAGV;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;6CARA;QAGf;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAeuB;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAGlC;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAGmD;AAC/C,gJAAkB,UAAU;IAAC;sBAGE;AAAe,gIAAY,UAAU;IAAC;;AAI3C;IAAI;;AAGR;IAAK;;AAKF,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;+CA1CiB;;;EA2CzB;;;;;;;;;;;;;;;;;;;;;+BA3IwB;AAAkB,UAAA,AAAa,aAAD,WAChD,mIAAkB,+IAClB,mHAAY,YAAY;EAAC;;MDrBZ,OAAG;YAAG;;;MCWnB,wBAAoB;YAAG,qCAC3B,cAAM,4ZAGK,mBACC;;MAqDR,4BAAwB;;;MA+Gd,qBAAiB","file":"app.ddc.js"}');
   // Exports:
   return {
     app: app

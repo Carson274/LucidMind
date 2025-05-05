@@ -5,7 +5,10 @@ part 'home_page.over_react.g.dart';
 
 UiFactory<HomePageProps> HomePage = castUiFactory(_$HomePage);
 
-mixin HomePageProps on UiProps {}
+mixin HomePageProps on UiProps {
+  String? name;
+  void Function(String)? setUserName;
+}
 
 class HomePageComponent extends UiComponent2<HomePageProps> {
   @override
@@ -18,7 +21,10 @@ class HomePageComponent extends UiComponent2<HomePageProps> {
         'padding': '20px',
       }
     )(
-      (Header()..name = 'Carson Secrest')(),
+      (Header()
+        ..name = props.name
+        ..setUserName = props.setUserName
+      )(),
       Dom.p()('Home page incoming...'),
     );
   }

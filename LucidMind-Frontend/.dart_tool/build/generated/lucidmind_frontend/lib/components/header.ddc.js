@@ -2,7 +2,7 @@
 // Version: 3.7.2 (stable) (Tue Mar 11 04:27:50 2025 -0700) on "macos_arm64"
 // Module: packages/lucidmind_frontend/components/header
 // Flags: soundNullSafety(true), enableAsserts(true)
-define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks', 'packages/over_react/src/component/resize_sensor_constants'], (function load__packages__lucidmind_frontend__components__header(dart_sdk, packages__over_react__component_base, packages__react__hooks, packages__over_react__src__component__resize_sensor_constants) {
+define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_frontend/components/login_button', 'packages/react/hooks', 'packages/over_react/src/component/resize_sensor_constants'], (function load__packages__lucidmind_frontend__components__header(dart_sdk, packages__over_react__component_base, packages__lucidmind_frontend__components__login_button, packages__react__hooks, packages__over_react__src__component__resize_sensor_constants) {
   'use strict';
   const dart_rti = dart_sdk.dart_rti;
   const core = dart_sdk.core;
@@ -17,6 +17,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
   const prop_mixins = packages__over_react__component_base.src__component__prop_mixins;
   const map_util = packages__over_react__component_base.src__util__map_util;
   const cast_ui_factory = packages__over_react__component_base.src__util__cast_ui_factory;
+  const login_button = packages__lucidmind_frontend__components__login_button.components__login_button;
   const react = packages__react__hooks.react;
   const js_backed_map = packages__react__hooks.react_client__js_backed_map;
   const prop_key_util = packages__over_react__src__component__resize_sensor_constants.src__util__prop_key_util;
@@ -65,7 +66,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
       return C[11] = dart.const(new _js_helper.PrivateSymbol.new('_typedPropsCache=', _typedPropsCache_));
     },
     get C15() {
-      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), ["HeaderProps.name"]);
+      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), ["HeaderProps.name", "HeaderProps.setUserName"]);
     },
     get C17() {
       return C[17] = dart.const(Object.setPrototypeOf({
@@ -76,8 +77,17 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
         [PropDescriptor_key]: "HeaderProps.name"
       }, component_base.PropDescriptor.prototype));
     },
+    get C18() {
+      return C[18] = dart.const(Object.setPrototypeOf({
+        [PropDescriptor_isLate]: false,
+        [PropDescriptor_errorMessage]: "",
+        [PropDescriptor_isNullable]: false,
+        [PropDescriptor_isRequired]: false,
+        [PropDescriptor_key]: "HeaderProps.setUserName"
+      }, component_base.PropDescriptor.prototype));
+    },
     get C16() {
-      return C[16] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "over_react__src__component_declaration__component_base|PropDescriptor", true), [C[17] || CT.C17]);
+      return C[16] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "over_react__src__component_declaration__component_base|PropDescriptor", true), [C[17] || CT.C17, C[18] || CT.C18]);
     },
     get C14() {
       return C[14] = dart.const(Object.setPrototypeOf({
@@ -93,26 +103,26 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
         [_AccessorMetaCollection__metaByMixin]: C[13] || CT.C13
       }, component_base.PropsMetaCollection.prototype));
     },
-    get C18() {
-      return C[18] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria', ___$UbiquitousDomPropsMixin_aria));
-    },
     get C19() {
-      return C[19] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria=', ___$UbiquitousDomPropsMixin_aria_));
+      return C[19] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria', ___$UbiquitousDomPropsMixin_aria));
     },
     get C20() {
-      return C[20] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom', ___$UbiquitousDomPropsMixin_dom));
+      return C[20] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria=', ___$UbiquitousDomPropsMixin_aria_));
     },
     get C21() {
-      return C[21] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom=', ___$UbiquitousDomPropsMixin_dom_));
+      return C[21] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom', ___$UbiquitousDomPropsMixin_dom));
     },
     get C22() {
-      return C[22] = dart.fn(header._$Header, dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|_$$HeaderProps([core|Map<@,@>?])", true));
+      return C[22] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom=', ___$UbiquitousDomPropsMixin_dom_));
     },
     get C23() {
-      return C[23] = dart.gFn(prop_key_util.getPropKey, dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String(~(0^),0^(core|Map<@,@>))<core|Map<@,@>>", true), dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "@", true), [dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Map<@,@>", true)]));
+      return C[23] = dart.fn(header._$Header, dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|_$$HeaderProps([core|Map<@,@>?])", true));
+    },
+    get C24() {
+      return C[24] = dart.gFn(prop_key_util.getPropKey, dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String(~(0^),0^(core|Map<@,@>))<core|Map<@,@>>", true), dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "@", true), [dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Map<@,@>", true)]));
     }
   });
-  var C = Array(24).fill(void 0);
+  var C = Array(25).fill(void 0);
   var I = [
     "package:lucidmind_frontend/components/header.dart",
     "dart:core",
@@ -121,6 +131,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
     "org-dartlang-app:///packages/lucidmind_frontend/components/header.over_react.g.dart"
   ];
   var name = dart.privateName(header, "HeaderProps.name");
+  var setUserName = dart.privateName(header, "HeaderProps.setUserName");
   header.HeaderProps = class HeaderProps extends builder_helpers.UiProps {};
   header.HeaderProps[dart.mixinOn] = UiProps => class HeaderProps extends UiProps {
     get name() {
@@ -129,18 +140,32 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
     set name(value) {
       this[name] = value;
     }
+    get setUserName() {
+      return this[setUserName];
+    }
+    set setUserName(value) {
+      this[setUserName] = value;
+    }
   };
   (header.HeaderProps[dart.mixinNew] = function() {
     this[name] = null;
+    this[setUserName] = null;
   }).prototype = header.HeaderProps.prototype;
   dart.addRtiResources(header.HeaderProps, ["lucidmind_frontend__components__header|HeaderProps"]);
   dart.setLibraryUri(header.HeaderProps, I[0]);
-  dart.setFieldSignature(header.HeaderProps, () => dart.global.Object.setPrototypeOf({name: {
+  dart.setFieldSignature(header.HeaderProps, () => dart.global.Object.setPrototypeOf({
+    name: {
       type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
       isConst: false,
       isFinal: false,
       libraryUri: I[1]
-    }}, dart.getFields(dart.global.Object.getPrototypeOf(header.HeaderProps))));
+    },
+    setUserName: {
+      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true),
+      isConst: false,
+      isFinal: false
+    }
+  }, dart.getFields(dart.global.Object.getPrototypeOf(header.HeaderProps))));
   var __Component__props = dart.privateName(header, "_#Component#_props");
   var __Component__props$ = dart.privateName(react, "_#Component#_props");
   var __Component__props_ = dart.privateName(header, "_#Component#_props=");
@@ -162,7 +187,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
   var _typedPropsCache_ = dart.privateName(header, "_typedPropsCache=");
   header.HeaderComponent = class HeaderComponent extends component_base_2.UiComponent2 {
     render() {
-      let t$360, t$360$, t$360$0, t$360$1, t$360$2, t$360$3, t$360$4;
+      let t$360, t$360$, t$360$0, t$360$1, t$360$2, t$360$3, t$360$4, t$360$5;
       return (t$360 = dom_components.Dom.div(), (() => {
         t$360.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["backgroundColor", "#1D1D1D", "borderRadius", "24px", "padding", "1.5rem", "color", "#FFFFFF", "display", "flex", "justifyContent", "space-between", "alignItems", "center"]);
         return t$360;
@@ -173,16 +198,19 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
         t$360$0.src = "assets/LucidMind_Logo.svg";
         t$360$0.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["width", "80px", "height", "80px", "marginRight", "20px"]);
         return t$360$0;
-      })()).call()), (t$360$1 = dom_components.Dom.div(), (() => {
-        t$360$1.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["display", "flex", "alignItems", "center"]);
+      })()).call()), dom_components.Dom.div().call((t$360$1 = login_button.LoginButton(), (() => {
+        t$360$1.setUserName = this.props.setUserName;
         return t$360$1;
-      })()).call((t$360$2 = dom_components.Dom.h1(), (() => {
-        t$360$2.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["fontFamily", "Lato, sans-serif", "fontWeight", "300", "fontSize", "24px", "margin", "0"]);
+      })()).call()), (t$360$2 = dom_components.Dom.div(), (() => {
+        t$360$2.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["display", "flex", "alignItems", "center"]);
         return t$360$2;
-      })()).call((t$360$3 = this.props.name, t$360$3 == null ? "User Not Found" : t$360$3)), (t$360$4 = dom_components.Dom.img(), (() => {
-        t$360$4.src = "assets/Me.svg";
-        t$360$4.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["width", "80px", "height", "80px", "marginLeft", "20px"]);
-        return t$360$4;
+      })()).call((t$360$3 = dom_components.Dom.h1(), (() => {
+        t$360$3.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["fontFamily", "Lato, sans-serif", "fontWeight", "300", "fontSize", "24px", "margin", "0"]);
+        return t$360$3;
+      })()).call((t$360$4 = this.props.name, t$360$4 == null ? "User Not Found" : t$360$4)), (t$360$5 = dom_components.Dom.img(), (() => {
+        t$360$5.src = "assets/Me.svg";
+        t$360$5.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["width", "80px", "height", "80px", "marginLeft", "20px"]);
+        return t$360$5;
       })()).call()));
     }
     static ['_#new#tearOff']() {
@@ -275,19 +303,33 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
       t$360[$_set](t$361, t$362);
       return t$362;
     }
+    get setUserName() {
+      let t$360;
+      return dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)[_as]((t$360 = this.props[$_get]("HeaderProps.setUserName"), t$360 == null ? null : t$360));
+    }
+    set setUserName(value) {
+      let t$362, t$361, t$360;
+      t$360 = this.props;
+      t$361 = "HeaderProps.setUserName";
+      t$362 = value;
+      t$360[$_set](t$361, t$362);
+      return t$362;
+    }
     validateRequiredProps() {
       super.validateRequiredProps();
     }
   };
   dart.addRtiResources(header.$HeaderProps, ["lucidmind_frontend__components__header|$HeaderProps"]);
   dart.setGetterSignature(header.$HeaderProps, () => dart.global.Object.setPrototypeOf({
-    name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true)
+    name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
+    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
   }, dart.getGetters(dart.global.Object.getPrototypeOf(header.$HeaderProps))));
   dart.setSetterSignature(header.$HeaderProps, () => dart.global.Object.setPrototypeOf({
-    name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true)
+    name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
+    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
   }, dart.getSetters(dart.global.Object.getPrototypeOf(header.$HeaderProps))));
   dart.setLibraryUri(header.$HeaderProps, I[0]);
-  dart.setStaticFieldSignature(header.$HeaderProps, () => ['meta', '_$prop__name__HeaderProps', '_$key__name__HeaderProps', '$props', '$propKeys']);
+  dart.setStaticFieldSignature(header.$HeaderProps, () => ['meta', '_$prop__name__HeaderProps', '_$prop__setUserName__HeaderProps', '_$key__name__HeaderProps', '_$key__setUserName__HeaderProps', '$props', '$propKeys']);
   dart.defineLazy(header.$HeaderProps, {
     /*header.$HeaderProps.meta*/get meta() {
       return C[14] || CT.C14;
@@ -295,8 +337,14 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
     /*header.$HeaderProps._$prop__name__HeaderProps*/get _$prop__name__HeaderProps() {
       return C[17] || CT.C17;
     },
+    /*header.$HeaderProps._$prop__setUserName__HeaderProps*/get _$prop__setUserName__HeaderProps() {
+      return C[18] || CT.C18;
+    },
     /*header.$HeaderProps._$key__name__HeaderProps*/get _$key__name__HeaderProps() {
       return "HeaderProps.name";
+    },
+    /*header.$HeaderProps._$key__setUserName__HeaderProps*/get _$key__setUserName__HeaderProps() {
+      return "HeaderProps.setUserName";
     },
     /*header.$HeaderProps.$props*/get $props() {
       return C[16] || CT.C16;
@@ -375,16 +423,16 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
       return this[_props];
     }
     get [___$UbiquitousDomPropsMixin_aria$]() {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[18] || CT.C18)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[19] || CT.C19)));
     }
     set [___$UbiquitousDomPropsMixin_aria$](value) {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[19] || CT.C19, value)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[20] || CT.C20, value)));
     }
     get [___$UbiquitousDomPropsMixin_dom$]() {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[20] || CT.C20)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[21] || CT.C21)));
     }
     set [___$UbiquitousDomPropsMixin_dom$](value) {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[21] || CT.C21, value)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[22] || CT.C22, value)));
     }
   };
   (header._$$HeaderProps$PlainMap.new = function(_ti, backingMap) {
@@ -418,16 +466,16 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
       return this[_props];
     }
     get [___$UbiquitousDomPropsMixin_aria$]() {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[18] || CT.C18)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[19] || CT.C19)));
     }
     set [___$UbiquitousDomPropsMixin_aria$](value) {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[19] || CT.C19, value)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[20] || CT.C20, value)));
     }
     get [___$UbiquitousDomPropsMixin_dom$]() {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[20] || CT.C20)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[21] || CT.C21)));
     }
     set [___$UbiquitousDomPropsMixin_dom$](value) {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[21] || CT.C21, value)));
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[22] || CT.C22, value)));
     }
   };
   (header._$$HeaderProps$JsMap.new = function(_ti, backingMap) {
@@ -526,14 +574,14 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
   };
   dart.defineLazy(header, {
     /*header.Header*/get Header() {
-      return cast_ui_factory.castUiFactory(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|HeaderProps", true), C[22] || CT.C22);
+      return cast_ui_factory.castUiFactory(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|HeaderProps", true), C[23] || CT.C23);
     },
     set Header(value) {},
     /*header.$HeaderComponentFactory*/get $HeaderComponentFactory() {
-      return component_base_2.registerComponent2(dart.fn(() => new header._$HeaderComponent.new(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|_$HeaderComponent", true)), dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|_$HeaderComponent()", true)), {builderFactory: C[22] || CT.C22, componentClass: dart_rti.createRuntimeType(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|HeaderComponent", true)), isWrapper: false, parentType: null});
+      return component_base_2.registerComponent2(dart.fn(() => new header._$HeaderComponent.new(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|_$HeaderComponent", true)), dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|_$HeaderComponent()", true)), {builderFactory: C[23] || CT.C23, componentClass: dart_rti.createRuntimeType(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__header|HeaderComponent", true)), isWrapper: false, parentType: null});
     },
     /*header._$getPropKey$_$$HeaderProps*/get _$getPropKey$_$$HeaderProps() {
-      return C[23] || CT.C23;
+      return C[24] || CT.C24;
     },
     /*header._$metaForHeaderProps*/get _$metaForHeaderProps() {
       return C[14] || CT.C14;
@@ -545,7 +593,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/react/hooks'
     "package:lucidmind_frontend/components/header.dart": header
   }, {
     "package:lucidmind_frontend/components/header.dart": ["header.over_react.g.dart"]
-  }, '{"version":3,"sourceRoot":"","sources":["header.dart","header.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAQU;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAMM,OAYL,QAME,SAWF,SAMI,SAOG,SACH;AA3CX,YAUE,oCAVU;AACR,QADQ,cACA,kIACR,mBAAmB,WACnB,gBAAgB,QAChB,WAAW,UACX,SAAS,WACT,WAAW,QACX,kBAAkB,iBAClB,cAAc;cARN;iBAiBT,oCALI;AACD,QADC,eACO,kIACR,WAAW,QACX,cAAc;cAHb;iBAaF,qCAPI;AACD,QADC,cACK;AACN,QAFC,gBAEO,kIACR,SAAS,QACT,UAAU,QACV,eAAe;cALd;qBAgBL,qCALG;AACD,QADC,gBACO,kIACR,WAAW,QACX,cAAc;cAHb;iBAaA,oCAPI;AACD,QADC,gBACO,kIACR,cAAc,oBACd,cAAc,OACd,YAAY,QACZ,UAAU;cALT;kBAOQ,UAAX,AAAM,iBAAA,kBAAQ,mBAAR,WAQP,qCAPI;AACD,QADC,cACK;AACN,QAFC,gBAEO,kIACR,SAAS,QACT,UAAU,QACV,cAAc;cALb;;IAUb;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UCyG4B;AAAN,YAA0C,8EAAT,QAAhC,AAAK,uCAAA,gBAA8B,OAA9B;IAA8C;aAEvD;UAA4C,OAA5B,OAAN;;MAAM;cAA4B,KAAK;MAAvC,AAAK,aAAC,OAA4B;;IAAK;;AAY1D;IACR;;;;;;;;;;;;MAjBuB,wBAAI;;;MAMC,6CAAyB;;;MAEjC,4CAAwB;;;MAEV,0BAAM;;;MACd,6BAAS;;;;;;;;;;;;;;;;oBA9IP;AAC1B,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,4JAAgC,+GAAX,UAAU;;AAEtC,cAAO,kKAAwB,UAAU;;IAE7C;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,iCAApB;IAA2C;;;;;AAItB;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAA2B,qJAAC,SAAS,EAAE,QAAC,OAAQ,2IAAe,GAAG;IAAE;;;;AA/BxE;;EAAkB;;;;;;;;;;;;;;;;;;;;AAoDD;IAAM;;;;;;;;;;;;;;sDARM;QAGb;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;mDARG;QAGlB;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAe0B;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAGrC;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAGsD;AAClD,wKAAqB,UAAU;IAAC;sBAGE;AAClC,wJAAe,UAAU;IAAC;;AAIA;IAAI;;AAGR;IAAQ;;AAKL,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;kDA3CoB;;;EA4C5B;;;;;;;;;;;;;;;;;;;;;wCA5I8B;AAAkB,UAAA,AAAa,aAAD,WACtD,2JAAqB,+IACrB,2IAAe,YAAY;EAAC;;MDtBX,aAAM;YAAG;;;MCY1B,8BAAuB;YAAG,qCAC9B,cAAM,wdAGK,mBACC;;MAqDR,kCAA2B;;;MAuHjB,2BAAoB","file":"header.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["header.dart","header.over_react.g.dart"],"names":[],"mappings":"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","file":"header.ddc.js"}');
   // Exports:
   return {
     components__header: header

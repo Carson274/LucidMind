@@ -22,6 +22,8 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   const js_backed_map = packages__react__hooks.react_client__js_backed_map;
   const prop_key_util = packages__over_react__src__component__resize_sensor_constants.src__util__prop_key_util;
   var home_page = Object.create(dart.library);
+  var $_get = dartx._get;
+  var $_set = dartx._set;
   dart._checkModuleNullSafetyMode(true);
   const CT = Object.create({
     _: () => (C, CT)
@@ -64,10 +66,28 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       return C[11] = dart.const(new _js_helper.PrivateSymbol.new('_typedPropsCache=', _typedPropsCache_));
     },
     get C15() {
-      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), []);
+      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), ["HomePageProps.name", "HomePageProps.setUserName"]);
+    },
+    get C17() {
+      return C[17] = dart.const(Object.setPrototypeOf({
+        [PropDescriptor_isLate]: false,
+        [PropDescriptor_errorMessage]: "",
+        [PropDescriptor_isNullable]: false,
+        [PropDescriptor_isRequired]: false,
+        [PropDescriptor_key]: "HomePageProps.name"
+      }, component_base.PropDescriptor.prototype));
+    },
+    get C18() {
+      return C[18] = dart.const(Object.setPrototypeOf({
+        [PropDescriptor_isLate]: false,
+        [PropDescriptor_errorMessage]: "",
+        [PropDescriptor_isNullable]: false,
+        [PropDescriptor_isRequired]: false,
+        [PropDescriptor_key]: "HomePageProps.setUserName"
+      }, component_base.PropDescriptor.prototype));
     },
     get C16() {
-      return C[16] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "over_react__src__component_declaration__component_base|PropDescriptor", true), []);
+      return C[16] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "over_react__src__component_declaration__component_base|PropDescriptor", true), [C[17] || CT.C17, C[18] || CT.C18]);
     },
     get C14() {
       return C[14] = dart.const(Object.setPrototypeOf({
@@ -83,37 +103,69 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
         [_AccessorMetaCollection__metaByMixin]: C[13] || CT.C13
       }, component_base.PropsMetaCollection.prototype));
     },
-    get C17() {
-      return C[17] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria', ___$UbiquitousDomPropsMixin_aria));
-    },
-    get C18() {
-      return C[18] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria=', ___$UbiquitousDomPropsMixin_aria_));
-    },
     get C19() {
-      return C[19] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom', ___$UbiquitousDomPropsMixin_dom));
+      return C[19] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria', ___$UbiquitousDomPropsMixin_aria));
     },
     get C20() {
-      return C[20] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom=', ___$UbiquitousDomPropsMixin_dom_));
+      return C[20] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#aria=', ___$UbiquitousDomPropsMixin_aria_));
     },
     get C21() {
-      return C[21] = dart.fn(home_page._$HomePage, dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|_$$HomePageProps([core|Map<@,@>?])", true));
+      return C[21] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom', ___$UbiquitousDomPropsMixin_dom));
     },
     get C22() {
-      return C[22] = dart.gFn(prop_key_util.getPropKey, dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String(~(0^),0^(core|Map<@,@>))<core|Map<@,@>>", true), dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "@", true), [dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Map<@,@>", true)]));
+      return C[22] = dart.const(new _js_helper.PrivateSymbol.new('_#_$UbiquitousDomPropsMixin#dom=', ___$UbiquitousDomPropsMixin_dom_));
+    },
+    get C23() {
+      return C[23] = dart.fn(home_page._$HomePage, dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|_$$HomePageProps([core|Map<@,@>?])", true));
+    },
+    get C24() {
+      return C[24] = dart.gFn(prop_key_util.getPropKey, dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String(~(0^),0^(core|Map<@,@>))<core|Map<@,@>>", true), dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "@", true), [dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Map<@,@>", true)]));
     }
   });
-  var C = Array(23).fill(void 0);
+  var C = Array(25).fill(void 0);
   var I = [
     "package:lucidmind_frontend/pages/home_page.dart",
-    "package:over_react/src/component_declaration/component_base.dart",
     "dart:core",
+    "package:over_react/src/component_declaration/component_base.dart",
     "package:react/react_client/js_backed_map.dart",
     "org-dartlang-app:///packages/lucidmind_frontend/pages/home_page.over_react.g.dart"
   ];
+  var name = dart.privateName(home_page, "HomePageProps.name");
+  var setUserName = dart.privateName(home_page, "HomePageProps.setUserName");
   home_page.HomePageProps = class HomePageProps extends builder_helpers.UiProps {};
-  home_page.HomePageProps[dart.mixinOn] = UiProps => class HomePageProps extends UiProps {};
+  home_page.HomePageProps[dart.mixinOn] = UiProps => class HomePageProps extends UiProps {
+    get name() {
+      return this[name];
+    }
+    set name(value) {
+      this[name] = value;
+    }
+    get setUserName() {
+      return this[setUserName];
+    }
+    set setUserName(value) {
+      this[setUserName] = value;
+    }
+  };
+  (home_page.HomePageProps[dart.mixinNew] = function() {
+    this[name] = null;
+    this[setUserName] = null;
+  }).prototype = home_page.HomePageProps.prototype;
   dart.addRtiResources(home_page.HomePageProps, ["lucidmind_frontend__pages__home_page|HomePageProps"]);
   dart.setLibraryUri(home_page.HomePageProps, I[0]);
+  dart.setFieldSignature(home_page.HomePageProps, () => dart.global.Object.setPrototypeOf({
+    name: {
+      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
+      isConst: false,
+      isFinal: false,
+      libraryUri: I[1]
+    },
+    setUserName: {
+      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true),
+      isConst: false,
+      isFinal: false
+    }
+  }, dart.getFields(dart.global.Object.getPrototypeOf(home_page.HomePageProps))));
   var __Component__props = dart.privateName(home_page, "_#Component#_props");
   var __Component__props$ = dart.privateName(react, "_#Component#_props");
   var __Component__props_ = dart.privateName(home_page, "_#Component#_props=");
@@ -140,7 +192,8 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
         t$360.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["display", "flex", "flexDirection", "column", "minHeight", "100vh", "padding", "20px"]);
         return t$360;
       })()).call((t$360$ = header.Header(), (() => {
-        t$360$.name = "Carson Secrest";
+        t$360$.name = this.props.name;
+        t$360$.setUserName = this.props.setUserName;
         return t$360$;
       })()).call(), dom_components.Dom.p().call("Home page incoming..."));
     }
@@ -213,20 +266,69 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   dart.setLibraryUri(home_page.HomePageComponent, I[0]);
   var _is = dart.privateName(dart_rti, "_is");
   var PropsMeta_keys = dart.privateName(component_base, "PropsMeta.keys");
+  var PropDescriptor_isLate = dart.privateName(component_base, "PropDescriptor.isLate");
+  var PropDescriptor_errorMessage = dart.privateName(component_base, "PropDescriptor.errorMessage");
+  var PropDescriptor_isNullable = dart.privateName(component_base, "PropDescriptor.isNullable");
+  var PropDescriptor_isRequired = dart.privateName(component_base, "PropDescriptor.isRequired");
+  var PropDescriptor_key = dart.privateName(component_base, "PropDescriptor.key");
   var PropsMeta_fields = dart.privateName(component_base, "PropsMeta.fields");
   var _AccessorMetaCollection__metaByMixin = dart.privateName(component_base, "_AccessorMetaCollection._metaByMixin");
   home_page.$HomePageProps = class $36HomePageProps extends home_page.HomePageProps {};
   home_page.$HomePageProps[dart.mixinOn] = HomePageProps => class $36HomePageProps extends HomePageProps {
+    get name() {
+      let t$360;
+      return dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true)[_as]((t$360 = this.props[$_get]("HomePageProps.name"), t$360 == null ? null : t$360));
+    }
+    set name(value) {
+      let t$362, t$361, t$360;
+      t$360 = this.props;
+      t$361 = "HomePageProps.name";
+      t$362 = value;
+      t$360[$_set](t$361, t$362);
+      return t$362;
+    }
+    get setUserName() {
+      let t$360;
+      return dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)[_as]((t$360 = this.props[$_get]("HomePageProps.setUserName"), t$360 == null ? null : t$360));
+    }
+    set setUserName(value) {
+      let t$362, t$361, t$360;
+      t$360 = this.props;
+      t$361 = "HomePageProps.setUserName";
+      t$362 = value;
+      t$360[$_set](t$361, t$362);
+      return t$362;
+    }
     validateRequiredProps() {
       super.validateRequiredProps();
     }
   };
   dart.addRtiResources(home_page.$HomePageProps, ["lucidmind_frontend__pages__home_page|$HomePageProps"]);
+  dart.setGetterSignature(home_page.$HomePageProps, () => dart.global.Object.setPrototypeOf({
+    name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
+    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
+  }, dart.getGetters(dart.global.Object.getPrototypeOf(home_page.$HomePageProps))));
+  dart.setSetterSignature(home_page.$HomePageProps, () => dart.global.Object.setPrototypeOf({
+    name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
+    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
+  }, dart.getSetters(dart.global.Object.getPrototypeOf(home_page.$HomePageProps))));
   dart.setLibraryUri(home_page.$HomePageProps, I[0]);
-  dart.setStaticFieldSignature(home_page.$HomePageProps, () => ['meta', '$props', '$propKeys']);
+  dart.setStaticFieldSignature(home_page.$HomePageProps, () => ['meta', '_$prop__name__HomePageProps', '_$prop__setUserName__HomePageProps', '_$key__name__HomePageProps', '_$key__setUserName__HomePageProps', '$props', '$propKeys']);
   dart.defineLazy(home_page.$HomePageProps, {
     /*home_page.$HomePageProps.meta*/get meta() {
       return C[14] || CT.C14;
+    },
+    /*home_page.$HomePageProps._$prop__name__HomePageProps*/get _$prop__name__HomePageProps() {
+      return C[17] || CT.C17;
+    },
+    /*home_page.$HomePageProps._$prop__setUserName__HomePageProps*/get _$prop__setUserName__HomePageProps() {
+      return C[18] || CT.C18;
+    },
+    /*home_page.$HomePageProps._$key__name__HomePageProps*/get _$key__name__HomePageProps() {
+      return "HomePageProps.name";
+    },
+    /*home_page.$HomePageProps._$key__setUserName__HomePageProps*/get _$key__setUserName__HomePageProps() {
+      return "HomePageProps.setUserName";
     },
     /*home_page.$HomePageProps.$props*/get $props() {
       return C[16] || CT.C16;
@@ -237,6 +339,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   });
   const UiProps_HomePageProps$36 = class UiProps_HomePageProps extends builder_helpers.UiProps {};
   (UiProps_HomePageProps$36.new = function(_ti) {
+    home_page.HomePageProps[dart.mixinNew].call(this, null);
     dart.global.Object.getPrototypeOf(UiProps_HomePageProps$36).new.call(this, null);
   }).prototype = UiProps_HomePageProps$36.prototype;
   dart.applyMixin(UiProps_HomePageProps$36, home_page.HomePageProps);
@@ -304,16 +407,16 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       return this[_props];
     }
     get [___$UbiquitousDomPropsMixin_aria$]() {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[17] || CT.C17)));
-    }
-    set [___$UbiquitousDomPropsMixin_aria$](value) {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[18] || CT.C18, value)));
-    }
-    get [___$UbiquitousDomPropsMixin_dom$]() {
       return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[19] || CT.C19)));
     }
-    set [___$UbiquitousDomPropsMixin_dom$](value) {
+    set [___$UbiquitousDomPropsMixin_aria$](value) {
       return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[20] || CT.C20, value)));
+    }
+    get [___$UbiquitousDomPropsMixin_dom$]() {
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[21] || CT.C21)));
+    }
+    set [___$UbiquitousDomPropsMixin_dom$](value) {
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[22] || CT.C22, value)));
     }
   };
   (home_page._$$HomePageProps$PlainMap.new = function(_ti, backingMap) {
@@ -337,7 +440,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Map<@,@>", true),
       isConst: false,
       isFinal: false,
-      libraryUri: I[2]
+      libraryUri: I[1]
     }}, dart.getFields(dart.global.Object.getPrototypeOf(home_page._$$HomePageProps$PlainMap))));
   home_page._$$HomePageProps$JsMap = class _$36$36HomePageProps$36JsMap extends home_page._$$HomePageProps {
     static ['_#new#tearOff'](backingMap) {
@@ -347,16 +450,16 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       return this[_props];
     }
     get [___$UbiquitousDomPropsMixin_aria$]() {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[17] || CT.C17)));
-    }
-    set [___$UbiquitousDomPropsMixin_aria$](value) {
-      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[18] || CT.C18, value)));
-    }
-    get [___$UbiquitousDomPropsMixin_dom$]() {
       return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[19] || CT.C19)));
     }
-    set [___$UbiquitousDomPropsMixin_dom$](value) {
+    set [___$UbiquitousDomPropsMixin_aria$](value) {
       return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[20] || CT.C20, value)));
+    }
+    get [___$UbiquitousDomPropsMixin_dom$]() {
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.getter(C[21] || CT.C21)));
+    }
+    set [___$UbiquitousDomPropsMixin_dom$](value) {
+      return dart.throw(core.NoSuchMethodError.withInvocation(this, new core._Invocation.setter(C[22] || CT.C22, value)));
     }
   };
   (home_page._$$HomePageProps$JsMap.new = function(_ti, backingMap) {
@@ -455,26 +558,26 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   };
   dart.defineLazy(home_page, {
     /*home_page.HomePage*/get HomePage() {
-      return cast_ui_factory.castUiFactory(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|HomePageProps", true), C[21] || CT.C21);
+      return cast_ui_factory.castUiFactory(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|HomePageProps", true), C[23] || CT.C23);
     },
     set HomePage(value) {},
     /*home_page.$HomePageComponentFactory*/get $HomePageComponentFactory() {
-      return component_base_2.registerComponent2(dart.fn(() => new home_page._$HomePageComponent.new(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|_$HomePageComponent", true)), dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|_$HomePageComponent()", true)), {builderFactory: C[21] || CT.C21, componentClass: dart_rti.createRuntimeType(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|HomePageComponent", true)), isWrapper: false, parentType: null});
+      return component_base_2.registerComponent2(dart.fn(() => new home_page._$HomePageComponent.new(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|_$HomePageComponent", true)), dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|_$HomePageComponent()", true)), {builderFactory: C[23] || CT.C23, componentClass: dart_rti.createRuntimeType(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__pages__home_page|HomePageComponent", true)), isWrapper: false, parentType: null});
     },
     /*home_page._$getPropKey$_$$HomePageProps*/get _$getPropKey$_$$HomePageProps() {
-      return C[22] || CT.C22;
+      return C[24] || CT.C24;
     },
     /*home_page._$metaForHomePageProps*/get _$metaForHomePageProps() {
       return C[14] || CT.C14;
     }
   });
   dart.moduleConstCaches.set("packages/lucidmind_frontend/pages/home_page", C);
-  dart_rti._Universe.addRules(dart.typeUniverse, JSON.parse('{"_js_helper|IdentityMap":{"IdentityMap.K":"1","IdentityMap.V":"2","InternalMap.K":"1","InternalMap.V":"2","_js_helper|InternalMap":["1","2"],"MapBase.K":"1","MapBase.V":"2","collection|MapBase":["1","2"],"LinkedHashMap.K":"1","LinkedHashMap.V":"2","collection|LinkedHashMap":["1","2"],"HashMap.K":"1","HashMap.V":"2","collection|HashMap":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"_js_helper|InternalMap":{"InternalMap.K":"1","InternalMap.V":"2","MapBase.K":"1","MapBase.V":"2","collection|MapBase":["1","2"],"LinkedHashMap.K":"1","LinkedHashMap.V":"2","collection|LinkedHashMap":["1","2"],"HashMap.K":"1","HashMap.V":"2","collection|HashMap":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"collection|MapBase":{"MapBase.K":"1","MapBase.V":"2","Map.K":"1","Map.V":"2","core|Map":["1","2"]},"collection|LinkedHashMap":{"LinkedHashMap.K":"1","LinkedHashMap.V":"2","Map.K":"1","Map.V":"2","core|Map":["1","2"]},"collection|HashMap":{"HashMap.K":"1","HashMap.V":"2","Map.K":"1","Map.V":"2","core|Map":["1","2"]},"core|Map":{"Map.K":"1","Map.V":"2"},"core|String":{"Comparable.T":"core|String","core|Comparable":["core|String"],"core|Pattern":[]},"core|Comparable":{"Comparable.T":"1"},"lucidmind_frontend__pages__home_page|HomePageComponent":{"UiComponent2.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__component_base_2|UiComponent2":["lucidmind_frontend__pages__home_page|HomePageProps"],"UiComponent.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component2":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"_GeneratedUiComponentStubs.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["lucidmind_frontend__pages__home_page|HomePageProps"],"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[],"over_react__src__component_declaration__component_base|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"]},"over_react__src__component_declaration__component_base_2|UiComponent2":{"UiComponent2.TProps":"1","UiComponent.TProps":"1","over_react__src__component_declaration__builder_helpers|UiComponent":["1"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component2":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"_GeneratedUiComponentStubs.TProps":"1","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["1"],"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[],"over_react__src__component_declaration__component_base|UiComponent":["1"]},"lucidmind_frontend__pages__home_page|HomePageProps":{"over_react__src__component_declaration__builder_helpers|UiProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__builder_helpers|UiComponent":{"UiComponent.TProps":"1","_GeneratedUiComponentStubs.TProps":"1","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["1"],"over_react__src__component_declaration__component_base|UiComponent":["1"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[]},"over_react__src__component_declaration__builder_helpers|UiProps":{"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"react__react|Component2":{"react__react|Component":[]},"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":{"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[]},"over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":{"_GeneratedUiComponentStubs.TProps":"1","over_react__src__component_declaration__builder_helpers|GeneratedClass":[]},"over_react__src__component_declaration__component_base|UiProps":{"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__component_base|UiComponent":{"UiComponent.TProps":"1","react__react|Component":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[]},"over_react__src__util__class_names|CssClassPropsMixin":{"over_react__src__util__class_names|_$CssClassPropsMixin":[]},"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":{"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[]},"over_react__src__component__prop_mixins|ReactPropsMixin":{"over_react__src__component__prop_mixins|_$ReactPropsMixin":[]},"over_react__src__component_declaration__component_base|PropsMapViewMixin":{"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__component_base|MapViewMixin":{"MapViewMixin.K":"1","MapViewMixin.V":"2","_OverReactMapViewBase.K":"1","_OverReactMapViewBase.V":"2","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"over_react__src__component_declaration__component_base|_OverReactMapViewBase":{"_OverReactMapViewBase.K":"1","_OverReactMapViewBase.V":"2"},"core|Expando":{"Expando.T":"1"},"react__react_client__js_backed_map|JsBackedMap":{"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"Map.K":"@","Map.V":"@","core|Map":["@","@"]},"lucidmind_frontend__pages__home_page|_$$HomePageProps$JsMap":{"lucidmind_frontend__pages__home_page|_$$HomePageProps":[],"lucidmind_frontend__pages__home_page|$HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"lucidmind_frontend__pages__home_page|_$$HomePageProps":{"lucidmind_frontend__pages__home_page|$HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"lucidmind_frontend__pages__home_page|$HomePageProps":{"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"lucidmind_frontend__pages__home_page|_$$HomePageProps$PlainMap":{"lucidmind_frontend__pages__home_page|_$$HomePageProps":[],"lucidmind_frontend__pages__home_page|$HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__component_base|PropDescriptor":{"over_react__src__component_declaration__component_base|_Descriptor":[]},"over_react__src__component_declaration__component_base|PropsMeta":{"over_react__src__component_declaration__component_base|ConsumedProps":[],"AccessorMeta.T":"over_react__src__component_declaration__component_base|PropDescriptor","over_react__src__component_declaration__component_base|AccessorMeta":["over_react__src__component_declaration__component_base|PropDescriptor"]},"over_react__src__component_declaration__component_base|AccessorMeta":{"AccessorMeta.T":"1"},"core|List":{"List.E":"1","Iterable.E":"1","core|Iterable":["1"],"_ListIterable.E":"1","core|_ListIterable":["1"],"EfficientLengthIterable.T":"1","_internal|EfficientLengthIterable":["1"],"HideEfficientLengthIterable.T":"1","_internal|HideEfficientLengthIterable":["1"]},"core|Iterable":{"Iterable.E":"1"},"core|_ListIterable":{"_ListIterable.E":"1","EfficientLengthIterable.T":"1","_internal|EfficientLengthIterable":["1"],"HideEfficientLengthIterable.T":"1","_internal|HideEfficientLengthIterable":["1"],"Iterable.E":"1","core|Iterable":["1"]},"_internal|EfficientLengthIterable":{"EfficientLengthIterable.T":"1","Iterable.E":"1","core|Iterable":["1"]},"_internal|HideEfficientLengthIterable":{"HideEfficientLengthIterable.T":"1","Iterable.E":"1","core|Iterable":["1"]},"_js_helper|LinkedMap":{"LinkedMap.K":"1","LinkedMap.V":"2","InternalMap.K":"1","InternalMap.V":"2","_js_helper|InternalMap":["1","2"],"MapBase.K":"1","MapBase.V":"2","collection|MapBase":["1","2"],"LinkedHashMap.K":"1","LinkedHashMap.V":"2","collection|LinkedHashMap":["1","2"],"HashMap.K":"1","HashMap.V":"2","collection|HashMap":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"over_react__src__component__aria_mixin|AriaPropsMixin":{"over_react__src__component__aria_mixin|_$AriaPropsMixin":[]},"over_react__src__component__prop_mixins|DomPropsMixin":{"over_react__src__component__prop_mixins|_$DomPropsMixin":[]},"lucidmind_frontend__pages__home_page|_$HomePageComponent":{"lucidmind_frontend__pages__home_page|HomePageComponent":[],"UiComponent2.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__component_base_2|UiComponent2":["lucidmind_frontend__pages__home_page|HomePageProps"],"UiComponent.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component2":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"_GeneratedUiComponentStubs.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["lucidmind_frontend__pages__home_page|HomePageProps"],"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[],"over_react__src__component_declaration__component_base|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"]}}'));
+  dart_rti._Universe.addRules(dart.typeUniverse, JSON.parse('{"core|String":{"Comparable.T":"core|String","core|Comparable":["core|String"],"core|Pattern":[]},"core|Comparable":{"Comparable.T":"1"},"_js_helper|IdentityMap":{"IdentityMap.K":"1","IdentityMap.V":"2","InternalMap.K":"1","InternalMap.V":"2","_js_helper|InternalMap":["1","2"],"MapBase.K":"1","MapBase.V":"2","collection|MapBase":["1","2"],"LinkedHashMap.K":"1","LinkedHashMap.V":"2","collection|LinkedHashMap":["1","2"],"HashMap.K":"1","HashMap.V":"2","collection|HashMap":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"_js_helper|InternalMap":{"InternalMap.K":"1","InternalMap.V":"2","MapBase.K":"1","MapBase.V":"2","collection|MapBase":["1","2"],"LinkedHashMap.K":"1","LinkedHashMap.V":"2","collection|LinkedHashMap":["1","2"],"HashMap.K":"1","HashMap.V":"2","collection|HashMap":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"collection|MapBase":{"MapBase.K":"1","MapBase.V":"2","Map.K":"1","Map.V":"2","core|Map":["1","2"]},"collection|LinkedHashMap":{"LinkedHashMap.K":"1","LinkedHashMap.V":"2","Map.K":"1","Map.V":"2","core|Map":["1","2"]},"collection|HashMap":{"HashMap.K":"1","HashMap.V":"2","Map.K":"1","Map.V":"2","core|Map":["1","2"]},"core|Map":{"Map.K":"1","Map.V":"2"},"lucidmind_frontend__pages__home_page|HomePageComponent":{"UiComponent2.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__component_base_2|UiComponent2":["lucidmind_frontend__pages__home_page|HomePageProps"],"UiComponent.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component2":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"_GeneratedUiComponentStubs.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["lucidmind_frontend__pages__home_page|HomePageProps"],"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[],"over_react__src__component_declaration__component_base|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"]},"over_react__src__component_declaration__component_base_2|UiComponent2":{"UiComponent2.TProps":"1","UiComponent.TProps":"1","over_react__src__component_declaration__builder_helpers|UiComponent":["1"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component2":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"_GeneratedUiComponentStubs.TProps":"1","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["1"],"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[],"over_react__src__component_declaration__component_base|UiComponent":["1"]},"lucidmind_frontend__pages__home_page|HomePageProps":{"over_react__src__component_declaration__builder_helpers|UiProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__builder_helpers|UiComponent":{"UiComponent.TProps":"1","_GeneratedUiComponentStubs.TProps":"1","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["1"],"over_react__src__component_declaration__component_base|UiComponent":["1"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[]},"over_react__src__component_declaration__builder_helpers|UiProps":{"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"react__react|Component2":{"react__react|Component":[]},"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":{"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[]},"over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":{"_GeneratedUiComponentStubs.TProps":"1","over_react__src__component_declaration__builder_helpers|GeneratedClass":[]},"over_react__src__component_declaration__component_base|UiProps":{"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__component_base|UiComponent":{"UiComponent.TProps":"1","react__react|Component":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[]},"over_react__src__util__class_names|CssClassPropsMixin":{"over_react__src__util__class_names|_$CssClassPropsMixin":[]},"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":{"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[]},"over_react__src__component__prop_mixins|ReactPropsMixin":{"over_react__src__component__prop_mixins|_$ReactPropsMixin":[]},"over_react__src__component_declaration__component_base|PropsMapViewMixin":{"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__component_base|MapViewMixin":{"MapViewMixin.K":"1","MapViewMixin.V":"2","_OverReactMapViewBase.K":"1","_OverReactMapViewBase.V":"2","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"over_react__src__component_declaration__component_base|_OverReactMapViewBase":{"_OverReactMapViewBase.K":"1","_OverReactMapViewBase.V":"2"},"core|Expando":{"Expando.T":"1"},"react__react_client__js_backed_map|JsBackedMap":{"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"Map.K":"@","Map.V":"@","core|Map":["@","@"]},"lucidmind_frontend__pages__home_page|_$$HomePageProps$JsMap":{"lucidmind_frontend__pages__home_page|_$$HomePageProps":[],"lucidmind_frontend__pages__home_page|$HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"lucidmind_frontend__pages__home_page|_$$HomePageProps":{"lucidmind_frontend__pages__home_page|$HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"lucidmind_frontend__pages__home_page|$HomePageProps":{"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"lucidmind_frontend__pages__home_page|_$$HomePageProps$PlainMap":{"lucidmind_frontend__pages__home_page|_$$HomePageProps":[],"lucidmind_frontend__pages__home_page|$HomePageProps":[],"over_react__src__component_declaration__builder_helpers|UiProps":[],"lucidmind_frontend__pages__home_page|HomePageProps":[],"over_react__src__component_declaration__component_base|UiProps":[],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"Map.K":"@","Map.V":"@","core|Map":["@","@"],"over_react__src__util__class_names|CssClassPropsMixin":[],"over_react__src__component__prop_mixins|UbiquitousDomPropsMixin":[],"over_react__src__util__class_names|_$CssClassPropsMixin":[],"over_react__src__component__prop_mixins|ReactPropsMixin":[],"over_react__src__component__prop_mixins|_$UbiquitousDomPropsMixin":[],"over_react__src__component_declaration__component_base|PropsMapViewMixin":[],"over_react__src__component__prop_mixins|_$ReactPropsMixin":[],"MapBase.K":"@","MapBase.V":"@","collection|MapBase":["@","@"],"MapViewMixin.K":"@","MapViewMixin.V":"@","over_react__src__component_declaration__component_base|MapViewMixin":["@","@"],"_OverReactMapViewBase.K":"@","_OverReactMapViewBase.V":"@","over_react__src__component_declaration__component_base|_OverReactMapViewBase":["@","@"]},"over_react__src__component_declaration__component_base|PropDescriptor":{"over_react__src__component_declaration__component_base|_Descriptor":[]},"over_react__src__component_declaration__component_base|PropsMeta":{"over_react__src__component_declaration__component_base|ConsumedProps":[],"AccessorMeta.T":"over_react__src__component_declaration__component_base|PropDescriptor","over_react__src__component_declaration__component_base|AccessorMeta":["over_react__src__component_declaration__component_base|PropDescriptor"]},"over_react__src__component_declaration__component_base|AccessorMeta":{"AccessorMeta.T":"1"},"core|List":{"List.E":"1","Iterable.E":"1","core|Iterable":["1"],"_ListIterable.E":"1","core|_ListIterable":["1"],"EfficientLengthIterable.T":"1","_internal|EfficientLengthIterable":["1"],"HideEfficientLengthIterable.T":"1","_internal|HideEfficientLengthIterable":["1"]},"core|Iterable":{"Iterable.E":"1"},"core|_ListIterable":{"_ListIterable.E":"1","EfficientLengthIterable.T":"1","_internal|EfficientLengthIterable":["1"],"HideEfficientLengthIterable.T":"1","_internal|HideEfficientLengthIterable":["1"],"Iterable.E":"1","core|Iterable":["1"]},"_internal|EfficientLengthIterable":{"EfficientLengthIterable.T":"1","Iterable.E":"1","core|Iterable":["1"]},"_internal|HideEfficientLengthIterable":{"HideEfficientLengthIterable.T":"1","Iterable.E":"1","core|Iterable":["1"]},"_js_helper|LinkedMap":{"LinkedMap.K":"1","LinkedMap.V":"2","InternalMap.K":"1","InternalMap.V":"2","_js_helper|InternalMap":["1","2"],"MapBase.K":"1","MapBase.V":"2","collection|MapBase":["1","2"],"LinkedHashMap.K":"1","LinkedHashMap.V":"2","collection|LinkedHashMap":["1","2"],"HashMap.K":"1","HashMap.V":"2","collection|HashMap":["1","2"],"Map.K":"1","Map.V":"2","core|Map":["1","2"]},"over_react__src__component__aria_mixin|AriaPropsMixin":{"over_react__src__component__aria_mixin|_$AriaPropsMixin":[]},"over_react__src__component__prop_mixins|DomPropsMixin":{"over_react__src__component__prop_mixins|_$DomPropsMixin":[]},"lucidmind_frontend__pages__home_page|_$HomePageComponent":{"lucidmind_frontend__pages__home_page|HomePageComponent":[],"UiComponent2.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__component_base_2|UiComponent2":["lucidmind_frontend__pages__home_page|HomePageProps"],"UiComponent.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"],"over_react__src__component_declaration__builder_helpers|GeneratedClass":[],"react__react|Component2":[],"over_react__src__component_declaration__disposable_manager_proxy|DisposableManagerProxy":[],"_GeneratedUiComponentStubs.TProps":"lucidmind_frontend__pages__home_page|HomePageProps","over_react__src__component_declaration__builder_helpers|_GeneratedUiComponentStubs":["lucidmind_frontend__pages__home_page|HomePageProps"],"react__react|Component":[],"w_common__src__common__disposable_manager|DisposableManagerV7":[],"over_react__src__component_declaration__component_base|UiComponent":["lucidmind_frontend__pages__home_page|HomePageProps"]}}'));
   dart.trackLibraries("packages/lucidmind_frontend/pages/home_page", {
     "package:lucidmind_frontend/pages/home_page.dart": home_page
   }, {
     "package:lucidmind_frontend/pages/home_page.dart": ["home_page.over_react.g.dart"]
-  }, '{"version":3,"sourceRoot":"","sources":["home_page.dart","home_page.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAYgB,OAQH;AART,YAOC,oCAPW;AACR,QADQ,cACA,kIACR,WAAW,QACX,iBAAiB,UACjB,aAAa,SACb,WAAW;cALH;iBAQyB,UAAlC,AAAM,iBAAA;AAAI,QAAJ,cAAW;cAAX;oBACH,AAAG,4BAAC;IAEZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;AC4JU;IACR;;;;;;MAVuB,6BAAI;;;MAGO,+BAAM;;;MACd,kCAAS;;;;;;;;;;;;;;;oBAvIL;AAC5B,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,iKAAkC,+GAAX,UAAU;;AAExC,cAAO,uKAA0B,UAAU;;IAE/C;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,sCAApB;IAA6C;;;;;AAIxB;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAA6B,0JAAC,SAAS,EAAE,QAAC,OAAQ,gJAAiB,GAAG;IAAE;;;;AA/B5E;;EAAoB;;;;;;;;;;;;;;;;;;;;AAoDH;IAAM;;;;;;;;;;;;;;2DARQ;QAGf;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;wDARK;QAGpB;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAe4B;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAGvC;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAGwD;AACpD,6KAAuB,UAAU;IAAC;sBAGE;AACpC,6JAAiB,UAAU;IAAC;;AAIF;IAAI;;AAGR;IAAU;;AAKP,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;oDA3CsB;;;EA4C9B;;;;;;;;;;;;;;;;;;;;;+CA5IkC;AAAkB,UAAA,AAAa,aAAD,WAC1D,gKAAuB,+IACvB,gJAAiB,YAAY;EAAC;;MDrBX,kBAAQ;YAAG;;;MCW9B,mCAAyB;YAAG,qCAChC,cAAM,6dAGK,mBACC;;MAqDR,uCAA6B;;;MAgHnB,gCAAsB","file":"home_page.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["home_page.dart","home_page.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAQU;;;;;;IACe;;;;;;;;IADf;IACe;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAMT,OAQH;AART,YAOC,oCAPW;AACR,QADQ,cACA,kIACR,WAAW,QACX,iBAAiB,UACjB,aAAa,SACb,WAAW;cALH;iBAWT,UAHA,AAAM,iBAAA;AACH,QADG,cACI,AAAM;AACb,QAFG,qBAEW,AAAM;cAFjB;oBAIH,AAAG,4BAAC;IAEZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UC+I4B;AAAN,YAA4C,8EAAT,QAAlC,AAAK,yCAAA,gBAAgC,OAAhC;IAAgD;aAEzD;UAA8C,OAA9B,OAAN;;MAAM;cAA8B,KAAK;MAAzC,AAAK,aAAC,OAA8B;;IAAK;;UAG1D;AAAN,YAAmD,iFAAT,QAAzC,AAAK,gDAAA,gBAAuC,OAAvC;IACM;oBAEuB;UACQ,OAArC,OAAN;;MAAM;cAAqC,KAAK;MAAhD,AAAK,aAAC,OAAqC;;IAAK;;AAsB5C;IACR;;;;;;;;;;;;;;MAlCuB,6BAAI;;;MAaC,oDAA2B;;;MAE3B,2DAAkC;;;MAE1C,mDAA0B;;;MAC1B,0DAAiC;;;MAGnB,+BAAM;;;MAId,kCAAS;;;;;;;;;;;;;;;;oBA5JL;AAC5B,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,iKAAkC,+GAAX,UAAU;;AAExC,cAAO,uKAA0B,UAAU;;IAE/C;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,sCAApB;IAA6C;;;;;AAIxB;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAA6B,0JAAC,SAAS,EAAE,QAAC,OAAQ,gJAAiB,GAAG;IAAE;;;;AA/B5E;;EAAoB;;;;;;;;;;;;;;;;;;;;AAoDH;IAAM;;;;;;;;;;;;;;2DARQ;QAGf;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;wDARK;QAGpB;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAe4B;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAGvC;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAGwD;AACpD,6KAAuB,UAAU;IAAC;sBAGE;AACpC,6JAAiB,UAAU;IAAC;;AAIF;IAAI;;AAGR;IAAU;;AAKP,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;oDA3CsB;;;EA4C9B;;;;;;;;;;;;;;;;;;;;;+CA5IkC;AAAkB,UAAA,AAAa,aAAD,WAC1D,gKAAuB,+IACvB,gJAAiB,YAAY;EAAC;;MDrBX,kBAAQ;YAAG;;;MCW9B,mCAAyB;YAAG,qCAChC,cAAM,6dAGK,mBACC;;MAqDR,uCAA6B;;;MAwInB,gCAAsB","file":"home_page.ddc.js"}');
   // Exports:
   return {
     pages__home_page: home_page

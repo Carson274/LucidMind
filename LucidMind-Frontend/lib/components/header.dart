@@ -1,5 +1,8 @@
 import 'package:over_react/over_react.dart';
 
+// Import login button
+import '../components/login_button.dart';
+
 part 'header.over_react.g.dart';
 
 UiFactory<HeaderProps> Header = castUiFactory(_$Header);
@@ -7,6 +10,7 @@ UiFactory<HeaderProps> Header = castUiFactory(_$Header);
 // Props for the Header component
 mixin HeaderProps on UiProps {
   String? name;
+  void Function(String)? setUserName;
 }
 
 class HeaderComponent extends UiComponent2<HeaderProps> {
@@ -39,6 +43,12 @@ class HeaderComponent extends UiComponent2<HeaderProps> {
           }
         )(),
       ),
+
+      (Dom.div()(
+        (LoginButton()
+          ..setUserName = props.setUserName
+        )()
+      )),
 
       // Right side of the header
       (Dom.div()

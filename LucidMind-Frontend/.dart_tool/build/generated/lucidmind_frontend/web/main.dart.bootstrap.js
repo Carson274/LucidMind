@@ -65,6 +65,8 @@ let modulePaths = {
  "packages/logging/logging": "packages/logging/logging.ddc",
  "packages/lucidmind_frontend/app": "packages/lucidmind_frontend/app.ddc",
  "packages/lucidmind_frontend/components/header": "packages/lucidmind_frontend/components/header.ddc",
+ "packages/lucidmind_frontend/components/login_button": "packages/lucidmind_frontend/components/login_button.ddc",
+ "packages/lucidmind_frontend/firebase_auth_interop": "packages/lucidmind_frontend/firebase_auth_interop.ddc",
  "packages/lucidmind_frontend/pages/home_page": "packages/lucidmind_frontend/pages/home_page.ddc",
  "packages/meta/meta": "packages/meta/meta.ddc",
  "packages/meta/meta_meta": "packages/meta/meta_meta.ddc",

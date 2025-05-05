@@ -170,10 +170,34 @@ class _$HomePageComponent extends HomePageComponent {
     ' it is transitioned to the new mixin-based boilerplate.')
 mixin $HomePageProps on HomePageProps {
   static const PropsMeta meta = _$metaForHomePageProps;
+  @override
+  String? get name => (props[_$key__name__HomePageProps] ?? null) as String?;
+  @override
+  set name(String? value) => props[_$key__name__HomePageProps] = value;
+  @override
+  void Function(String)? get setUserName =>
+      (props[_$key__setUserName__HomePageProps] ?? null) as void Function(
+          String)?;
+  @override
+  set setUserName(void Function(String)? value) =>
+      props[_$key__setUserName__HomePageProps] = value;
   /* GENERATED CONSTANTS */
+  static const PropDescriptor _$prop__name__HomePageProps =
+      PropDescriptor(_$key__name__HomePageProps);
+  static const PropDescriptor _$prop__setUserName__HomePageProps =
+      PropDescriptor(_$key__setUserName__HomePageProps);
+  static const String _$key__name__HomePageProps = 'HomePageProps.name';
+  static const String _$key__setUserName__HomePageProps =
+      'HomePageProps.setUserName';
 
-  static const List<PropDescriptor> $props = [];
-  static const List<String> $propKeys = [];
+  static const List<PropDescriptor> $props = [
+    _$prop__name__HomePageProps,
+    _$prop__setUserName__HomePageProps
+  ];
+  static const List<String> $propKeys = [
+    _$key__name__HomePageProps,
+    _$key__setUserName__HomePageProps
+  ];
 
   @override
   @UiProps.$mustCallSuper
