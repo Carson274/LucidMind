@@ -68,7 +68,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       return C[11] = dart.const(new _js_helper.PrivateSymbol.new('_typedPropsCache=', _typedPropsCache_));
     },
     get C15() {
-      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), ["LoginButtonProps.setUserName"]);
+      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), ["LoginButtonProps.setUser"]);
     },
     get C17() {
       return C[17] = dart.const(Object.setPrototypeOf({
@@ -76,7 +76,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
         [PropDescriptor_errorMessage]: "",
         [PropDescriptor_isNullable]: false,
         [PropDescriptor_isRequired]: false,
-        [PropDescriptor_key]: "LoginButtonProps.setUserName"
+        [PropDescriptor_key]: "LoginButtonProps.setUser"
       }, component_base.PropDescriptor.prototype));
     },
     get C16() {
@@ -123,23 +123,23 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     "package:react/react_client/js_backed_map.dart",
     "org-dartlang-app:///packages/lucidmind_frontend/components/login_button.over_react.g.dart"
   ];
-  var setUserName = dart.privateName(login_button, "LoginButtonProps.setUserName");
+  var setUser = dart.privateName(login_button, "LoginButtonProps.setUser");
   login_button.LoginButtonProps = class LoginButtonProps extends builder_helpers.UiProps {};
   login_button.LoginButtonProps[dart.mixinOn] = UiProps => class LoginButtonProps extends UiProps {
-    get setUserName() {
-      return this[setUserName];
+    get setUser() {
+      return this[setUser];
     }
-    set setUserName(value) {
-      this[setUserName] = value;
+    set setUser(value) {
+      this[setUser] = value;
     }
   };
   (login_button.LoginButtonProps[dart.mixinNew] = function() {
-    this[setUserName] = null;
+    this[setUser] = null;
   }).prototype = login_button.LoginButtonProps.prototype;
   dart.addRtiResources(login_button.LoginButtonProps, ["lucidmind_frontend__components__login_button|LoginButtonProps"]);
   dart.setLibraryUri(login_button.LoginButtonProps, I[0]);
-  dart.setFieldSignature(login_button.LoginButtonProps, () => dart.global.Object.setPrototypeOf({setUserName: {
-      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true),
+  dart.setFieldSignature(login_button.LoginButtonProps, () => dart.global.Object.setPrototypeOf({setUser: {
+      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true),
       isConst: false,
       isFinal: false
     }}, dart.getFields(dart.global.Object.getPrototypeOf(login_button.LoginButtonProps))));
@@ -176,7 +176,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
           switch (t$goto) {
             case 0:
               // Function start
-              core.print("🔄 Sign-in clicked");
+              core.print("Sign-in clicked");
               t$handler = 3;
               asyncScope$.auth = firebase_auth_interop.firebaseAuth;
               asyncScope$.promise = dart_rti._Universe.eval(dart_rti._theUniverse(), "_interceptors|JSObject", true)[_as](asyncScope$.auth.signInWithPopup(dart_rti._Universe.eval(dart_rti._theUniverse(), "_interceptors|JavaScriptObject", true)[_as](new dart.global.firebase.auth.GoogleAuthProvider())));
@@ -186,16 +186,16 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
               // returning from await.
               asyncScope$.result = t$result;
               if (asyncScope$.result == null) {
-                core.print("❌ Sign-in returned null.");
+                core.print("Error during sign-in: Sign-in returned null user.");
                 // goto return
                 t$goto = 7;
                 break;
               }
               asyncScope$.credential = dart_rti._Universe.eval(dart_rti._theUniverse(), "_interceptors|JavaScriptObject", true)[_as](asyncScope$.result);
               asyncScope$.user = js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "_interceptors|JavaScriptObject", true), asyncScope$.credential, "user");
-              core.print("🧑 Name: " + js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "displayName"));
-              core.print("📧 Email: " + js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "email"));
-              dart.nullCheck(this.props.setUserName)(js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "displayName"));
+              core.print("Name: " + js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "displayName"));
+              core.print("Email: " + js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "email"));
+              dart.nullCheck(this.props.setUser)(js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "displayName"), js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "email"), js_util.getProperty(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), asyncScope$.user, "uid"));
               t$handler = 1;
               // goto after finally
               t$goto = 5;
@@ -206,7 +206,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
               t$36$35e = t$errorStack.pop();
               asyncScope.e = dart.getThrown(t$36$35e);
               if (dart_rti._Universe.eval(dart_rti._theUniverse(), "core|Object", true)[_is](asyncScope.e))
-                core.print("🔥 Error during sign-in: " + dart.str(asyncScope.e));
+                core.print("Error during sign-in: " + dart.str(asyncScope.e));
               else
                 throw t$36$35e;
               // goto after finally
@@ -315,14 +315,14 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   var _AccessorMetaCollection__metaByMixin = dart.privateName(component_base, "_AccessorMetaCollection._metaByMixin");
   login_button.$LoginButtonProps = class $36LoginButtonProps extends login_button.LoginButtonProps {};
   login_button.$LoginButtonProps[dart.mixinOn] = LoginButtonProps => class $36LoginButtonProps extends LoginButtonProps {
-    get setUserName() {
+    get setUser() {
       let t$361;
-      return dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)[_as]((t$361 = this.props[$_get]("LoginButtonProps.setUserName"), t$361 == null ? null : t$361));
+      return dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true)[_as]((t$361 = this.props[$_get]("LoginButtonProps.setUser"), t$361 == null ? null : t$361));
     }
-    set setUserName(value) {
+    set setUser(value) {
       let t$363, t$362, t$361;
       t$361 = this.props;
-      t$362 = "LoginButtonProps.setUserName";
+      t$362 = "LoginButtonProps.setUser";
       t$363 = value;
       t$361[$_set](t$362, t$363);
       return t$363;
@@ -333,22 +333,22 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   };
   dart.addRtiResources(login_button.$LoginButtonProps, ["lucidmind_frontend__components__login_button|$LoginButtonProps"]);
   dart.setGetterSignature(login_button.$LoginButtonProps, () => dart.global.Object.setPrototypeOf({
-    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
+    setUser: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true)
   }, dart.getGetters(dart.global.Object.getPrototypeOf(login_button.$LoginButtonProps))));
   dart.setSetterSignature(login_button.$LoginButtonProps, () => dart.global.Object.setPrototypeOf({
-    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
+    setUser: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true)
   }, dart.getSetters(dart.global.Object.getPrototypeOf(login_button.$LoginButtonProps))));
   dart.setLibraryUri(login_button.$LoginButtonProps, I[0]);
-  dart.setStaticFieldSignature(login_button.$LoginButtonProps, () => ['meta', '_$prop__setUserName__LoginButtonProps', '_$key__setUserName__LoginButtonProps', '$props', '$propKeys']);
+  dart.setStaticFieldSignature(login_button.$LoginButtonProps, () => ['meta', '_$prop__setUser__LoginButtonProps', '_$key__setUser__LoginButtonProps', '$props', '$propKeys']);
   dart.defineLazy(login_button.$LoginButtonProps, {
     /*login_button.$LoginButtonProps.meta*/get meta() {
       return C[14] || CT.C14;
     },
-    /*login_button.$LoginButtonProps._$prop__setUserName__LoginButtonProps*/get _$prop__setUserName__LoginButtonProps() {
+    /*login_button.$LoginButtonProps._$prop__setUser__LoginButtonProps*/get _$prop__setUser__LoginButtonProps() {
       return C[17] || CT.C17;
     },
-    /*login_button.$LoginButtonProps._$key__setUserName__LoginButtonProps*/get _$key__setUserName__LoginButtonProps() {
-      return "LoginButtonProps.setUserName";
+    /*login_button.$LoginButtonProps._$key__setUser__LoginButtonProps*/get _$key__setUser__LoginButtonProps() {
+      return "LoginButtonProps.setUser";
     },
     /*login_button.$LoginButtonProps.$props*/get $props() {
       return C[16] || CT.C16;
@@ -597,7 +597,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     "package:lucidmind_frontend/components/login_button.dart": login_button
   }, {
     "package:lucidmind_frontend/components/login_button.dart": ["login_button.over_react.g.dart"]
-  }, '{"version":3,"sourceRoot":"","sources":["login_button.dart","login_button.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAWyB;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;oBAKJ;+JAAd;;;;;;;;;;cACH,WAAM;;cAGE,mBAAO;cACP,sBAAe,sFAAL,gBAAI,iBAAiB;cACtB;uCAAc,mHAAR,mBAAO;;;cAAtB;kBACF,kBAAM;gBACR,WAAM;;gBACN;;;cAGI,yBAAoB,8FAAP,kBAAM;cACnB,mBAAkB,8GAAX,sBAAU;cAEvB,WAAM,aAAiB,2FAAL,gBAAI;cACtB,WAAM,cAAkB,2FAAL,gBAAI;cAEN,AAAC,eAAlB,AAAM,wBAAkB,2FAAL,gBAAI;;;cAfzB;;;;;;cAgBS;;gBACP,WAAM,sCAA2B,YAAC;;;;cAjBpC;;;;;;;;;;;AAmBF;;;;;;YAtBK;IAsBL;;UAIc;AAAZ,YAWC,uCAXW;AACR,QADQ,0BACE;AACV,QAFQ,cAEA,kIACR,WAAW,eACX,YAAY,QACZ,gBAAgB,OAChB,mBAAmB,WACnB,SAAS,SACT,UAAU,QACV,UAAU;cATF;iBAWV;IACJ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UCwHY;AAAN,YAAsD,iFAAT,QAA5C,AAAK,mDAAA,gBAA0C,OAA1C;IACM;oBAEuB;UACW,OAAxC,OAAN;;MAAM;cAAwC,KAAK;MAAnD,AAAK,aAAC,OAAwC;;IAAK;;AAe/C;IACR;;;;;;;;;;;;MAvBuB,mCAAI;;;MASC,oEAAqC;;;MAE7C,mEAAoC;;;MAGtB,qCAAM;;;MAGd,wCAAS;;;;;;;;;;;;;;;;oBArJF;AAC/B,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,kLAAqC,+GAAX,UAAU;;AAE3C,cAAO,wLAA6B,UAAU;;IAElD;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,4CAApB;IAAgD;;;;;AAI3B;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAAgC,2KAC5B,SAAS,EAAE,QAAC,OAAQ,iKAAoB,GAAG;IAAE;;;;AAhCrD;;EAAuB;;;;;;;;;;;;;;;;;;;;AAqDN;IAAM;;;;;;;;;;;;;;iEARW;QAGlB;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;8DARQ;QAGvB;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAe+B;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAG1C;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAG2D;AACvD,8LAA0B,UAAU;IAAC;sBAGE;AACvC,8KAAoB,UAAU;IAAC;;AAIL;IAAI;;AAGR;IAAa;;AAKV,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;uDA3CyB;;;EA4CjC;;;;;;;;;;;;;;;;;;;;;wDA7IwC;AAAkB,UAAA,AAAa,aAAD,WAChE,iLAA0B,+IAC1B,iKAAoB,YAAY;EAAC;;MDnBX,wBAAW;;;;MCSjC,yCAA4B;YAAG,qCACnC,cAAM,ogBAGK,mBACC;;MAsDR,6CAAgC;;;MA6HtB,sCAAyB","file":"login_button.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["login_button.dart","login_button.over_react.g.dart"],"names":[],"mappings":"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","file":"login_button.ddc.js"}');
   // Exports:
   return {
     components__login_button: login_button

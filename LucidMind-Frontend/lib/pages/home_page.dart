@@ -7,7 +7,7 @@ UiFactory<HomePageProps> HomePage = castUiFactory(_$HomePage);
 
 mixin HomePageProps on UiProps {
   String? name;
-  void Function(String)? setUserName;
+  void Function(String, String, String)? setUser;
 }
 
 class HomePageComponent extends UiComponent2<HomePageProps> {
@@ -23,7 +23,7 @@ class HomePageComponent extends UiComponent2<HomePageProps> {
     )(
       (Header()
         ..name = props.name
-        ..setUserName = props.setUserName
+        ..setUser = props.setUser
       )(),
       Dom.p()('Home page incoming...'),
     );

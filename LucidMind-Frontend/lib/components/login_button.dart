@@ -9,32 +9,31 @@ UiFactory<LoginButtonProps> LoginButton = _$LoginButton;
 
 @Props()
 mixin LoginButtonProps on UiProps {
-  void Function(String)? setUserName;
+  void Function(String, String, String)? setUser;
 }
 
 @Component2()
 class LoginButtonComponent extends UiComponent2<LoginButtonProps> {
   void _handleSignIn(_) async {
-    print('🔄 Sign-in clicked');
+    print('Sign-in clicked');
 
     try {
       final auth = firebaseAuth;
-      final promise = auth.signInWithPopup(GoogleAuthProvider()); // ✅ must not be null
+      final promise = auth.signInWithPopup(GoogleAuthProvider());
       final result = await promise.toDart;
       if (result == null) {
-        print("❌ Sign-in returned null.");
+        print("Error during sign-in: Sign-in returned null user.");
         return;
       }
 
-      final credential = result as FirebaseUserCredential; // ✅ key line
+      final credential = result as FirebaseUserCredential;
       final user = credential.user;
 
-      print("🧑 Name: ${user.displayName}");
-      print("📧 Email: ${user.email}");
-
-      props.setUserName!(user.displayName);
+      print("Name: ${user.displayName}");
+      print("Email: ${user.email}");
+      props.setUser!(user.displayName, user.email, user.uid);
     } catch (e) {
-      print("🔥 Error during sign-in: $e");
+      print("Error during sign-in: $e");
     }
   }
 

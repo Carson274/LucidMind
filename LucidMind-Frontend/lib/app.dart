@@ -8,11 +8,18 @@ UiFactory<UiProps> App = castUiFactory(_$App);
 mixin AppProps on UiProps {}
 
 class AppComponent extends UiComponent2<UiProps> {
-  String? _userName;
+  @override
+  get initialState => {
+    'userName': null,
+    'userEmail': null,
+    'userID': null,
+  };
 
-  void _setUserName(String name) {
-    setState(() {
-      _userName = name;
+  void _setUser(String name, String email, String id) {
+    setState({
+      'userName': name,
+      'userEmail': email,
+      'userId': id,
     });
   }
 
@@ -20,8 +27,8 @@ class AppComponent extends UiComponent2<UiProps> {
   render() {
     return Dom.div()(
       (HomePage()
-        ..name = _userName
-        ..setUserName = _setUserName
+        ..name = state['userName']
+        ..setUser = _setUser
       )(),
     );
   }

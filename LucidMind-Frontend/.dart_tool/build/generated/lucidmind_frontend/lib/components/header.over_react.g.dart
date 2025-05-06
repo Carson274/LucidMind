@@ -175,28 +175,27 @@ mixin $HeaderProps on HeaderProps {
   @override
   set name(String? value) => props[_$key__name__HeaderProps] = value;
   @override
-  void Function(String)? get setUserName =>
-      (props[_$key__setUserName__HeaderProps] ?? null) as void Function(
-          String)?;
+  void Function(String, String, String)? get setUser =>
+      (props[_$key__setUser__HeaderProps] ?? null) as void Function(
+          String, String, String)?;
   @override
-  set setUserName(void Function(String)? value) =>
-      props[_$key__setUserName__HeaderProps] = value;
+  set setUser(void Function(String, String, String)? value) =>
+      props[_$key__setUser__HeaderProps] = value;
   /* GENERATED CONSTANTS */
   static const PropDescriptor _$prop__name__HeaderProps =
       PropDescriptor(_$key__name__HeaderProps);
-  static const PropDescriptor _$prop__setUserName__HeaderProps =
-      PropDescriptor(_$key__setUserName__HeaderProps);
+  static const PropDescriptor _$prop__setUser__HeaderProps =
+      PropDescriptor(_$key__setUser__HeaderProps);
   static const String _$key__name__HeaderProps = 'HeaderProps.name';
-  static const String _$key__setUserName__HeaderProps =
-      'HeaderProps.setUserName';
+  static const String _$key__setUser__HeaderProps = 'HeaderProps.setUser';
 
   static const List<PropDescriptor> $props = [
     _$prop__name__HeaderProps,
-    _$prop__setUserName__HeaderProps
+    _$prop__setUser__HeaderProps
   ];
   static const List<String> $propKeys = [
     _$key__name__HeaderProps,
-    _$key__setUserName__HeaderProps
+    _$key__setUser__HeaderProps
   ];
 
   @override

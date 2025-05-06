@@ -175,28 +175,27 @@ mixin $HomePageProps on HomePageProps {
   @override
   set name(String? value) => props[_$key__name__HomePageProps] = value;
   @override
-  void Function(String)? get setUserName =>
-      (props[_$key__setUserName__HomePageProps] ?? null) as void Function(
-          String)?;
+  void Function(String, String, String)? get setUser =>
+      (props[_$key__setUser__HomePageProps] ?? null) as void Function(
+          String, String, String)?;
   @override
-  set setUserName(void Function(String)? value) =>
-      props[_$key__setUserName__HomePageProps] = value;
+  set setUser(void Function(String, String, String)? value) =>
+      props[_$key__setUser__HomePageProps] = value;
   /* GENERATED CONSTANTS */
   static const PropDescriptor _$prop__name__HomePageProps =
       PropDescriptor(_$key__name__HomePageProps);
-  static const PropDescriptor _$prop__setUserName__HomePageProps =
-      PropDescriptor(_$key__setUserName__HomePageProps);
+  static const PropDescriptor _$prop__setUser__HomePageProps =
+      PropDescriptor(_$key__setUser__HomePageProps);
   static const String _$key__name__HomePageProps = 'HomePageProps.name';
-  static const String _$key__setUserName__HomePageProps =
-      'HomePageProps.setUserName';
+  static const String _$key__setUser__HomePageProps = 'HomePageProps.setUser';
 
   static const List<PropDescriptor> $props = [
     _$prop__name__HomePageProps,
-    _$prop__setUserName__HomePageProps
+    _$prop__setUser__HomePageProps
   ];
   static const List<String> $propKeys = [
     _$key__name__HomePageProps,
-    _$key__setUserName__HomePageProps
+    _$key__setUser__HomePageProps
   ];
 
   @override

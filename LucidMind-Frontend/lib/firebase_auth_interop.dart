@@ -25,7 +25,10 @@ class GoogleAuthProvider {
 
 extension FirebaseAuthExtension on FirebaseAuth {
   external JSPromise signInWithPopup(GoogleAuthProvider provider);
+  external FirebaseUser? get currentUser;
+  external JSPromise signOut();
 }
+
 
 @JS()
 @staticInterop

@@ -66,7 +66,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       return C[11] = dart.const(new _js_helper.PrivateSymbol.new('_typedPropsCache=', _typedPropsCache_));
     },
     get C15() {
-      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), ["HomePageProps.name", "HomePageProps.setUserName"]);
+      return C[15] = dart.constList(dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String", true), ["HomePageProps.name", "HomePageProps.setUser"]);
     },
     get C17() {
       return C[17] = dart.const(Object.setPrototypeOf({
@@ -83,7 +83,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
         [PropDescriptor_errorMessage]: "",
         [PropDescriptor_isNullable]: false,
         [PropDescriptor_isRequired]: false,
-        [PropDescriptor_key]: "HomePageProps.setUserName"
+        [PropDescriptor_key]: "HomePageProps.setUser"
       }, component_base.PropDescriptor.prototype));
     },
     get C16() {
@@ -131,7 +131,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     "org-dartlang-app:///packages/lucidmind_frontend/pages/home_page.over_react.g.dart"
   ];
   var name = dart.privateName(home_page, "HomePageProps.name");
-  var setUserName = dart.privateName(home_page, "HomePageProps.setUserName");
+  var setUser = dart.privateName(home_page, "HomePageProps.setUser");
   home_page.HomePageProps = class HomePageProps extends builder_helpers.UiProps {};
   home_page.HomePageProps[dart.mixinOn] = UiProps => class HomePageProps extends UiProps {
     get name() {
@@ -140,16 +140,16 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     set name(value) {
       this[name] = value;
     }
-    get setUserName() {
-      return this[setUserName];
+    get setUser() {
+      return this[setUser];
     }
-    set setUserName(value) {
-      this[setUserName] = value;
+    set setUser(value) {
+      this[setUser] = value;
     }
   };
   (home_page.HomePageProps[dart.mixinNew] = function() {
     this[name] = null;
-    this[setUserName] = null;
+    this[setUser] = null;
   }).prototype = home_page.HomePageProps.prototype;
   dart.addRtiResources(home_page.HomePageProps, ["lucidmind_frontend__pages__home_page|HomePageProps"]);
   dart.setLibraryUri(home_page.HomePageProps, I[0]);
@@ -160,8 +160,8 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       isFinal: false,
       libraryUri: I[1]
     },
-    setUserName: {
-      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true),
+    setUser: {
+      type: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true),
       isConst: false,
       isFinal: false
     }
@@ -193,7 +193,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
         return t$360;
       })()).call((t$360$ = header.Header(), (() => {
         t$360$.name = this.props.name;
-        t$360$.setUserName = this.props.setUserName;
+        t$360$.setUser = this.props.setUser;
         return t$360$;
       })()).call(), dom_components.Dom.p().call("Home page incoming..."));
     }
@@ -287,14 +287,14 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
       t$360[$_set](t$361, t$362);
       return t$362;
     }
-    get setUserName() {
+    get setUser() {
       let t$360;
-      return dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)[_as]((t$360 = this.props[$_get]("HomePageProps.setUserName"), t$360 == null ? null : t$360));
+      return dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true)[_as]((t$360 = this.props[$_get]("HomePageProps.setUser"), t$360 == null ? null : t$360));
     }
-    set setUserName(value) {
+    set setUser(value) {
       let t$362, t$361, t$360;
       t$360 = this.props;
-      t$361 = "HomePageProps.setUserName";
+      t$361 = "HomePageProps.setUser";
       t$362 = value;
       t$360[$_set](t$361, t$362);
       return t$362;
@@ -306,14 +306,14 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
   dart.addRtiResources(home_page.$HomePageProps, ["lucidmind_frontend__pages__home_page|$HomePageProps"]);
   dart.setGetterSignature(home_page.$HomePageProps, () => dart.global.Object.setPrototypeOf({
     name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
-    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
+    setUser: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true)
   }, dart.getGetters(dart.global.Object.getPrototypeOf(home_page.$HomePageProps))));
   dart.setSetterSignature(home_page.$HomePageProps, () => dart.global.Object.setPrototypeOf({
     name: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "core|String?", true),
-    setUserName: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String)?", true)
+    setUser: _ti => dart_rti._Universe.eval(dart_rti._theUniverse(), "~(core|String,core|String,core|String)?", true)
   }, dart.getSetters(dart.global.Object.getPrototypeOf(home_page.$HomePageProps))));
   dart.setLibraryUri(home_page.$HomePageProps, I[0]);
-  dart.setStaticFieldSignature(home_page.$HomePageProps, () => ['meta', '_$prop__name__HomePageProps', '_$prop__setUserName__HomePageProps', '_$key__name__HomePageProps', '_$key__setUserName__HomePageProps', '$props', '$propKeys']);
+  dart.setStaticFieldSignature(home_page.$HomePageProps, () => ['meta', '_$prop__name__HomePageProps', '_$prop__setUser__HomePageProps', '_$key__name__HomePageProps', '_$key__setUser__HomePageProps', '$props', '$propKeys']);
   dart.defineLazy(home_page.$HomePageProps, {
     /*home_page.$HomePageProps.meta*/get meta() {
       return C[14] || CT.C14;
@@ -321,14 +321,14 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     /*home_page.$HomePageProps._$prop__name__HomePageProps*/get _$prop__name__HomePageProps() {
       return C[17] || CT.C17;
     },
-    /*home_page.$HomePageProps._$prop__setUserName__HomePageProps*/get _$prop__setUserName__HomePageProps() {
+    /*home_page.$HomePageProps._$prop__setUser__HomePageProps*/get _$prop__setUser__HomePageProps() {
       return C[18] || CT.C18;
     },
     /*home_page.$HomePageProps._$key__name__HomePageProps*/get _$key__name__HomePageProps() {
       return "HomePageProps.name";
     },
-    /*home_page.$HomePageProps._$key__setUserName__HomePageProps*/get _$key__setUserName__HomePageProps() {
-      return "HomePageProps.setUserName";
+    /*home_page.$HomePageProps._$key__setUser__HomePageProps*/get _$key__setUser__HomePageProps() {
+      return "HomePageProps.setUser";
     },
     /*home_page.$HomePageProps.$props*/get $props() {
       return C[16] || CT.C16;
@@ -577,7 +577,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
     "package:lucidmind_frontend/pages/home_page.dart": home_page
   }, {
     "package:lucidmind_frontend/pages/home_page.dart": ["home_page.over_react.g.dart"]
-  }, '{"version":3,"sourceRoot":"","sources":["home_page.dart","home_page.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAQU;;;;;;IACe;;;;;;;;IADf;IACe;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAMT,OAQH;AART,YAOC,oCAPW;AACR,QADQ,cACA,kIACR,WAAW,QACX,iBAAiB,UACjB,aAAa,SACb,WAAW;cALH;iBAWT,UAHA,AAAM,iBAAA;AACH,QADG,cACI,AAAM;AACb,QAFG,qBAEW,AAAM;cAFjB;oBAIH,AAAG,4BAAC;IAEZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UC+I4B;AAAN,YAA4C,8EAAT,QAAlC,AAAK,yCAAA,gBAAgC,OAAhC;IAAgD;aAEzD;UAA8C,OAA9B,OAAN;;MAAM;cAA8B,KAAK;MAAzC,AAAK,aAAC,OAA8B;;IAAK;;UAG1D;AAAN,YAAmD,iFAAT,QAAzC,AAAK,gDAAA,gBAAuC,OAAvC;IACM;oBAEuB;UACQ,OAArC,OAAN;;MAAM;cAAqC,KAAK;MAAhD,AAAK,aAAC,OAAqC;;IAAK;;AAsB5C;IACR;;;;;;;;;;;;;;MAlCuB,6BAAI;;;MAaC,oDAA2B;;;MAE3B,2DAAkC;;;MAE1C,mDAA0B;;;MAC1B,0DAAiC;;;MAGnB,+BAAM;;;MAId,kCAAS;;;;;;;;;;;;;;;;oBA5JL;AAC5B,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,iKAAkC,+GAAX,UAAU;;AAExC,cAAO,uKAA0B,UAAU;;IAE/C;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,sCAApB;IAA6C;;;;;AAIxB;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAA6B,0JAAC,SAAS,EAAE,QAAC,OAAQ,gJAAiB,GAAG;IAAE;;;;AA/B5E;;EAAoB;;;;;;;;;;;;;;;;;;;;AAoDH;IAAM;;;;;;;;;;;;;;2DARQ;QAGf;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;wDARK;QAGpB;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAe4B;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAGvC;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAGwD;AACpD,6KAAuB,UAAU;IAAC;sBAGE;AACpC,6JAAiB,UAAU;IAAC;;AAIF;IAAI;;AAGR;IAAU;;AAKP,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;oDA3CsB;;;EA4C9B;;;;;;;;;;;;;;;;;;;;;+CA5IkC;AAAkB,UAAA,AAAa,aAAD,WAC1D,gKAAuB,+IACvB,gJAAiB,YAAY;EAAC;;MDrBX,kBAAQ;YAAG;;;MCW9B,mCAAyB;YAAG,qCAChC,cAAM,6dAGK,mBACC;;MAqDR,uCAA6B;;;MAwInB,gCAAsB","file":"home_page.ddc.js"}');
+  }, '{"version":3,"sourceRoot":"","sources":["home_page.dart","home_page.over_react.g.dart"],"names":[],"mappings":";;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;IAQU;;;;;;IAC+B;;;;;;;;IAD/B;IAC+B;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UAMzB,OAQH;AART,YAOC,oCAPW;AACR,QADQ,cACA,kIACR,WAAW,QACX,iBAAiB,UACjB,aAAa,SACb,WAAW;cALH;iBAWT,UAHA,AAAM,iBAAA;AACH,QADG,cACI,AAAM;AACb,QAFG,iBAEO,AAAM;cAFb;oBAIH,AAAG,4BAAC;IAEZ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;EACF;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;UC+I4B;AAAN,YAA4C,8EAAT,QAAlC,AAAK,yCAAA,gBAAgC,OAAhC;IAAgD;aAEzD;UAA8C,OAA9B,OAAN;;MAAM;cAA8B,KAAK;MAAzC,AAAK,aAAC,OAA8B;;IAAK;;UAG1D;AAAN,YAA+C,yGAAT,QAArC,AAAK,4CAAA,gBAAmC,OAAnC;IACsB;gBAEmB;UACR,OAAjC,OAAN;;MAAM;cAAiC,KAAK;MAA5C,AAAK,aAAC,OAAiC;;IAAK;;AAqBxC;IACR;;;;;;;;;;;;;;MAjCuB,6BAAI;;;MAaC,oDAA2B;;;MAE3B,uDAA8B;;;MAEtC,mDAA0B;;;MAC1B,sDAA6B;;;MAEf,+BAAM;;;MAId,kCAAS;;;;;;;;;;;;;;;;oBA3JL;AAC5B,UAAI,AAAW,UAAD,YAAuB,8GAAX,UAAU;AAClC,cAAO,iKAAkC,+GAAX,UAAU;;AAExC,cAAO,uKAA0B,UAAU;;IAE/C;;;;;AAI8B;IAAI;;UAKxB;AAAN,cAAM;6BAAoB,sCAApB;IAA6C;;;;;AAIxB;IAAE;;AAGK;IAGhC;gBAGkC;AACpC,YAAA,AAA6B,0JAAC,SAAS,EAAE,QAAC,OAAQ,gJAAiB,GAAG;IAAE;;;;AA/B5E;;EAAoB;;;;;;;;;;;;;;;;;;;;AAoDH;IAAM;;;;;;;;;;;;;;2DARQ;QAGf;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,oHAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;AAuByB;IAAM;;;;;;;;;;;;;;wDARK;QAGpB;;IAFE,eAAE;AACR;AACL,oBAAoB,QAAX,UAAU,EAAV,gBAAc,8IAAd;EAChB;;;;;;;;;;;;;;;;;;;;;;UAe4B;;;IAAiB;4BAAjB;;IAAiB;;AAGT;IAAiB;cAGvC;AACZ,WACyB,8GAArB,uBAAc,KAAK;AAMjB,oBAAQ,KAAK;AACnB,gCACI,yBAAyC,8GAArB,uBAAc,KAAK;IAC7C;wBAGwD;AACpD,6KAAuB,UAAU;IAAC;sBAGE;AACpC,6JAAiB,UAAU;IAAC;;AAIF;IAAI;;AAGR;IAAU;;AAKP,YAAA,AAAU;IAAG;;AAGL;IAG/B;;;;;;;oDA3CsB;;;EA4C9B;;;;;;;;;;;;;;;;;;;;;+CA5IkC;AAAkB,UAAA,AAAa,aAAD,WAC1D,gKAAuB,+IACvB,gJAAiB,YAAY;EAAC;;MDrBX,kBAAQ;YAAG;;;MCW9B,mCAAyB;YAAG,qCAChC,cAAM,6dAGK,mBACC;;MAqDR,uCAA6B;;;MAuInB,gCAAsB","file":"home_page.ddc.js"}');
   // Exports:
   return {
     pages__home_page: home_page
