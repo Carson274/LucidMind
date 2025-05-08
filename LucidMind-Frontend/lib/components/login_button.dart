@@ -50,6 +50,6 @@ class LoginButtonComponent extends UiComponent2<LoginButtonProps> {
         'border': 'none',
         'cursor': 'pointer',
       }
-    )('Sign in with Google');
+    )('Sign In');
   }
 }

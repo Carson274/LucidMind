@@ -235,7 +235,7 @@ define(['dart_sdk', 'packages/over_react/component_base', 'packages/lucidmind_fr
         t$361.onClick = dart.bind(this, _handleSignIn);
         t$361.style = new _js_helper.IdentityMap.from(dart_rti._Universe.eval(dart_rti._theUniverse(), "_js_helper|IdentityMap<core|String,@>", true), ["padding", "0.5rem 1rem", "fontSize", "1rem", "borderRadius", "8px", "backgroundColor", "#4285F4", "color", "white", "border", "none", "cursor", "pointer"]);
         return t$361;
-      })()).call("Sign in with Google");
+      })()).call("Sign In");
     }
     static ['_#new#tearOff']() {
       return new login_button.LoginButtonComponent.new(dart_rti._Universe.eval(dart_rti._theUniverse(), "lucidmind_frontend__components__login_button|LoginButtonComponent", true));
