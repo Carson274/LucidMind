@@ -20,7 +20,33 @@ fun Application.configureRouting() {
         }
         staticResources("static", "static")
 
+        // Mood routes
         route("/moods") {
+            // GET all moods
+            get {
+                try {
+                    val moods = firestoreService.getAllMoods()
+                    call.respond(
+                        HttpStatusCode.OK,
+                        MoodListResponse(
+                            success = true,
+                            message = "Moods retrieved successfully",
+                            data = moods
+                        )
+                    )
+                } catch (e: Exception) {
+                    call.respond(
+                        HttpStatusCode.InternalServerError,
+                        MoodListResponse(
+                            success = false,
+                            message = "Failed to retrieve moods: ${e.message}",
+                            data = emptyList()
+                        )
+                    )
+                }
+            }
+
+            // POST a single mood
             post {
                 try {
                     val moodEntry = call.receive<MoodEntry>()

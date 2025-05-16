@@ -11,6 +11,37 @@ import java.util.HashMap
 class FirestoreService {
     private val db: Firestore = FirestoreClient.getFirestore()
 
+    /**
+     * Retrieves all mood entries from the Firestore database.
+     *
+     * @return A list of MoodEntry objects.
+     */
+    suspend fun getAllMoods(): List<MoodEntry> {
+        val collectionName = "moods"
+
+        return withContext(Dispatchers.IO) {
+            try {
+                // Fetch all documents from the collection
+                val querySnapshot = db.collection(collectionName).get().get()
+                
+                // Map the documents to MoodEntry objects
+                querySnapshot.documents.map { document ->
+                    document.toObject(MoodEntry::class.java)!!
+                }
+            } catch (e: ExecutionException) {
+                throw RuntimeException("Error retrieving moods from Firestore", e)
+            } catch (e: InterruptedException) {
+                throw RuntimeException("Operation interrupted", e)
+            }
+        }
+    }
+
+    /**
+     * Adds a new mood entry to the Firestore database.
+     *
+     * @param mood The mood value to be added.
+     * @return The document ID of the newly created mood entry.
+     */
     suspend fun addMood(mood: Int): String {
         val collectionName = "moods"
 
