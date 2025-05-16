@@ -1,5 +1,5 @@
 name: lucidmind_frontend
-description: A Dart web app using OverReact
+description: A mood-tracking web application for LucidMind.
 version: 1.0.0
 
 environment:
