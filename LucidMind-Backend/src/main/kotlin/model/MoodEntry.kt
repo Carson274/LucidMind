@@ -13,5 +13,6 @@ import kotlinx.serialization.Serializable
 @Serializable
 data class MoodEntry(
     val mood: Int = 0,
+    val description: String = "",
     @Contextual val timestamp: Timestamp? = null
 )

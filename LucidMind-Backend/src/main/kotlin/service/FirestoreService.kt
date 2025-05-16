@@ -42,7 +42,7 @@ class FirestoreService {
      * @param mood The mood value to be added.
      * @return The document ID of the newly created mood entry.
      */
-    suspend fun addMood(mood: Int): String {
+    suspend fun addMood(mood: Int, description: String): String {
         val collectionName = "moods"
 
         return withContext(Dispatchers.IO) {
@@ -50,6 +50,7 @@ class FirestoreService {
                 // Create the document data as a Map<String, Any>
                 val entry = MoodEntry(
                     mood = mood,
+                    description = description,
                     timestamp = com.google.cloud.Timestamp.now()
                 )
                 
