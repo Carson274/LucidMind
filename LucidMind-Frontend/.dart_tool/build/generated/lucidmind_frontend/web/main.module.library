@@ -1,1 +1,0 @@
-{"isEntrypoint":true,"deps":["react|lib/react_dom.dart","lucidmind_frontend|lib/app.dart"],"parts":[],"conditionalDeps":[],"sdkDeps":["html"],"hasMain":true}
