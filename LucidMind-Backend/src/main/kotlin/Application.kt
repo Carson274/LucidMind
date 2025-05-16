@@ -7,22 +7,46 @@ import io.ktor.server.auth.*
 import com.example.auth.firebase.firebase
 import com.example.config.firebase.AuthConfig.configure
 import io.ktor.serialization.gson.*
+import io.ktor.serialization.kotlinx.json.*
 import io.ktor.server.request.*
 import io.ktor.server.plugins.calllogging.*
 import org.slf4j.event.Level
-
+import kotlinx.serialization.json.Json
 
 fun main(args: Array<String>): Unit = io.ktor.server.netty.EngineMain.main(args)
 
 @Suppress("unused")
 fun Application.module() {
-    // initialize Firebase Admin SDK
+    // Initialize Firebase Admin SDK
     FirebaseAdmin.init()
-    install(ContentNegotiation) { gson { setPrettyPrinting() } }
-    install(Authentication) { firebase { configure() } }
+    
+    // Setup Content Negotiation with both Gson and KotlinX JSON
+    install(ContentNegotiation) {
+        // Use Gson for backward compatibility
+        gson {
+            setPrettyPrinting()
+        }
+        // Add KotlinX JSON serialization
+        json(Json {
+            prettyPrint = true
+            isLenient = true
+            ignoreUnknownKeys = true
+        })
+    }
+    
+    // Firebase Authentication
+    install(Authentication) {
+        firebase {
+            configure()
+        }
+    }
+    
+    // Request logging
     install(CallLogging) {
         level = Level.INFO
         filter { call -> call.request.path().startsWith("/") }
     }
+    
+    // Setup routing
     configureRouting()
 }

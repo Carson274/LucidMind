@@ -28,6 +28,7 @@ dependencies {
     implementation("io.ktor:ktor-server-auth:2.3.4")
     implementation("com.google.firebase:firebase-admin:9.2.0")
     implementation("ch.qos.logback:logback-classic:1.4.11")
+    implementation("com.google.cloud:google-cloud-firestore:3.7.10")
     implementation(libs.ktor.server.core)
     implementation(libs.ktor.server.host.common)
     implementation(libs.ktor.server.content.negotiation)
