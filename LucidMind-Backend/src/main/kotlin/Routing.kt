@@ -50,7 +50,7 @@ fun Application.configureRouting() {
             post {
                 try {
                     val moodEntry = call.receive<MoodEntry>()
-                    val docId = firestoreService.addMood(moodEntry.mood, moodEntry.description)
+                    val docId = firestoreService.addMood(moodEntry.userId, moodEntry.mood, moodEntry.description)
                     call.respond(
                         HttpStatusCode.Created,
                         MoodResponse(
