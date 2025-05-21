@@ -22,3 +22,4 @@ jobs:
           firebaseServiceAccount: ${{ secrets.FIREBASE_SERVICE_ACCOUNT_LUCIDMIND_85FEE }}
           channelId: live
           projectId: lucidmind-85fee
+          entryPoint: LucidMind-Frontend
