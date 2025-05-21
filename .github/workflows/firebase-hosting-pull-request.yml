@@ -17,6 +17,7 @@ jobs:
       - run: dart pub get
         working-directory: LucidMind-Frontend
       - run: dart run build_runner build --release --output build
+        working-directory: LucidMind-Frontend
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: ${{ secrets.GITHUB_TOKEN }}
