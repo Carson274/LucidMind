@@ -16,7 +16,7 @@ jobs:
       - uses: dart-lang/setup-dart@v1
       - run: dart pub get
         working-directory: LucidMind-Frontend
-      - run: dart run build_runner build --release --output build/web --delete-conflicting-outputs
+      - run: dart run build_runner build --release --output build --delete-conflicting-outputs
         working-directory: LucidMind-Frontend
       - run: ls -R build/web
         working-directory: LucidMind-Frontend
