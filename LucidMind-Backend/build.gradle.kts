@@ -19,7 +19,15 @@ ktor {
     docker {
         localImageName.set("lucidmind-backend")
         imageTag.set("0.0.1-preview")
-        portMappings.set(listOf("8040:8040"))
+        portMappings.set(
+            listOf(
+                io.ktor.plugin.features.DockerPortMapping(
+                    8040,
+                    8040,
+                    io.ktor.plugin.features.DockerPortMappingProtocol.TCP
+                )
+            )
+        )
 
         externalRegistry.set(
             io.ktor.plugin.features.DockerImageRegistry.dockerHub(
